@@ -1,4 +1,4 @@
-import GreetingContainer from "./greetings/greeting_container";
+import Splash from './component/splash/splash'
 import React from "react";
 
 
@@ -6,7 +6,7 @@ const App = () => (
     <div>
         <header>
             <h1>o p e n  b o o k</h1>
-            {/* <GreetingContainer /> */}
+            <Splash />
         </header>
         <switch>
             <Route path="/login" component={LoginFormContainer} />
