@@ -37,20 +37,22 @@ render() {
   this.props.formType === 'login' ? other = 'signup' : other = 'login';
 
   return (
+    <div >
     <h1>  {this.props.formType} </h1>
     <Link to="/{other}">{other}</Link>
     <form onSubmit={this.handleSubmit}>
     <div>
-      <label >Username:
+      <label> Username:
       <input type="text" value={this.state.username} onChange={this.update('username')} />
       </label>
       <label> Password:
       <input type="password" value={this.state.password} onChange={this.update('password')} /> 
-      <input type='submit' value={this.props.formType}/>
       </label>
+      <input type='submit' value={this.props.formType}/>
       {this.renderErrors()}
     </div>
     </form>
-  );  
+    </div>
+  )  
 };
 }
