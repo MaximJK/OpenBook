@@ -1,6 +1,13 @@
 import Splash from './component/splash/splash'
 import React from "react";
-
+import { Provider } from 'react-redux';
+import {
+    Route,
+    Redirect,
+    Switch,
+    Link,
+    HashRouter
+} from 'react-router-dom';
 
 const App = () => (
     <div>
@@ -14,5 +21,5 @@ const App = () => (
         </switch>
     </div>
 );
-
-export default App
+debugger
+export default App;

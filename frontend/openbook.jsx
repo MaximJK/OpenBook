@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = configureStore();
     
     // test
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
     // test
-    ReactDOM.render(<Root store={store} />, root);
+    ReactDOM.render(<h1>hex</h1>, root);
 });
