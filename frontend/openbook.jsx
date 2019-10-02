@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.getState = store.getState;
     // window.dispatch = store.dispatch;
     // test
-    ReactDOM.render(<h1>hex</h1>, root);
+    ReactDOM.render(<h1>hey</h1>, root);
 });
