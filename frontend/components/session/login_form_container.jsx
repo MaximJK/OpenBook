@@ -1,13 +1,11 @@
-import SessionForm from 'frontend/components/session/session_form.jsx';
+import SessionForm from './session_form.jsx';
 import { login } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import React from 'react';
 
-mapStateToProps(state, ownProps)
-
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = ({ errors }) => {
   return {
-    errors: state.errors.session,
+    errors: errors.session,
     formType: 'login'
   }
 }

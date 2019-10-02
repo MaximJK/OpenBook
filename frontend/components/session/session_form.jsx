@@ -1,4 +1,5 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -16,31 +17,28 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
 }
   renderErrors() {
+    
     return (
       <ul>
-        {this.props.errors.map((error) => (
-          <li key={`error`}>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
             {error}
           </li>
         ))}
       </ul>
     );
   }
-update(){
-
-
-}
-
 
 render() {
   let other;
   this.props.formType === 'login' ? other = 'signup' : other = 'login';
-
+  debugger
   return (
     <div >
     <h1>  {this.props.formType} </h1>
     <Link to="/{other}">{other}</Link>
     <form onSubmit={this.handleSubmit}>
+      {this.renderErrors()}
     <div>
       <label> Username:
       <input type="text" value={this.state.username} onChange={this.update('username')} />
@@ -49,10 +47,10 @@ render() {
       <input type="password" value={this.state.password} onChange={this.update('password')} /> 
       </label>
       <input type='submit' value={this.props.formType}/>
-      {this.renderErrors()}
     </div>
     </form>
     </div>
   )  
 };
 }
+export default SessionForm;

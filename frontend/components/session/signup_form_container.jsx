@@ -1,17 +1,17 @@
-import SessionForm from 'frontend/components/session/session_form.jsx'
+import SessionForm from './session_form.jsx'
 import { connect } from 'react-redux';
-import { signup } from '/Users/aa/Downloads/W8D1-solo/W7D5-master/frontend/actions/session_actions.js';
+import { signUp } from '../../actions/session_actions';
 import React from 'react';
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = ({ errors }) => {
   return {
-    errors: state.errors.session,
+    errors: errors.session,
     formType: 'signup'
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    processForm: (user) => dispatch(signup(user)),
+    processForm: (user) => dispatch(signUp(user)),
   };
 
 };

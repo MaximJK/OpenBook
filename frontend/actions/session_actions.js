@@ -2,7 +2,7 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT = "LOGOUT";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
-import { createUser, createSession, deleteSession } from "../util/session_api_util";
+import * as APIUtil from "../util/session_api_util";
 
 export const receiveCurrentUser = user => ({
     type: RECEIVE_CURRENT_USER,
@@ -18,11 +18,25 @@ export const receiveErrors = errors => ({
     errors
 });
 
-export const signup = formUser => dispatch => createUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+export const signUp = user => dispatch => (
+    APIUtil.signup(user).then(user => (
+        dispatch(receiveCurrentUser(user))
+    ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+    ))
+);
 
-export const login = formUser => dispatch => createSession(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
 
-export const logout = () => dispatch => deleteSession()
-    .then(() => dispatch(logoutCurrentUser()));
+export const login = user => dispatch => (
+    APIUtil.login(user).then(user => (
+        dispatch(receiveCurrentUser(user))
+    ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+    ))
+);
+
+export const logout = () => dispatch => (
+    APIUtil.logout().then(user => (
+        dispatch(logoutCurrentUser())
+    ))
+);
