@@ -17,10 +17,10 @@ const App = () => (
             <h1>o p e n  b o o k</h1>
             <Splash />
         </header>
-        <switch>
+        {/* <switch>
             <Route path="/login" component={LoginFormContainer} />
             <Route path="/signup" component={SignupFormContainer} />
-        </switch>
+        </switch> */}
     </div>
 );
 
