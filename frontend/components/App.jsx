@@ -1,6 +1,6 @@
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import Splash from './splash/splash'
+import Splash from './splash/splash';
 import React from "react";
 import { Provider } from 'react-redux';
 import {
