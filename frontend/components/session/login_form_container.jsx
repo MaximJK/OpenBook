@@ -6,7 +6,6 @@ import React from 'react';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'login'
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

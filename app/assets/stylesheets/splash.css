@@ -1,0 +1,28 @@
+.splash-all{
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+    border: 10px, black;
+    height: 100px;
+
+
+
+}
+.splash-title {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif"
+}
+span.book{
+    font-weight: bold;
+  
+}
+.splash-login-container{
+
+}
+.splash-slogan{
+
+}
+.splash-signup-container{
+
+}
