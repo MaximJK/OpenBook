@@ -4,9 +4,9 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
 import * as APIUtil from "../util/session_api_util";
 
-export const receiveCurrentUser = user => ({
+export const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
-    user
+    currentUser
 });
 
 export const logoutCurrentUser = () => ({

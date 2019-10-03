@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const Splash = ({ currentUser, logout }) => {
+    debugger
     const personalGreeting = () => (
         <nav>
             <h1>hello, {currentUser.username}</h1>
