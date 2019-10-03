@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from './components/root'
+import Root from './components/root';
 import configureStore from "./store/store";
-import * as utils from './util/session_api_util.js'
+import * as utils from './util/session_api_util.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
-    window.utils = utils
     let store;
     if (window.currentUser) {
         const preloadedState = {
@@ -22,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // test
+    window.utils = utils
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     // test
