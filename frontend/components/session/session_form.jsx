@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
 
 
 render() {
-
+debugger
   return (
     <div >
     <h1>  {this.props.formType} </h1>

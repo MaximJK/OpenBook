@@ -1,7 +1,8 @@
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import Splash from './splash/splash';
+import GreetingsContainer from './greetings/greetings_container';
 import React from "react";
+// import SplashContainer from './splash/splash_container'
 import { Provider } from 'react-redux';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
@@ -15,14 +16,16 @@ import {
 const App = () => (
     <div>
         <header>
-            <Link to="/" className="header-link">
+            <Link to="/" >
             <h1>o p e n  b o o k</h1>
             </Link>
-            <Splash />
+            <GreetingsContainer/>
         </header>
         <Switch>
-            <Route path="/login" component={LoginFormContainer} />
-            <Route path="/signup" component={SignupFormContainer} />
+            <AuthRoute path="/login" component={LoginFormContainer} />
+            <AuthRoute path="/signup" component={SignupFormContainer} />
+            {/* <AuthRoute path="/" components={SplashContainer}/> */}
+            
         </Switch>
     </div>
 );
