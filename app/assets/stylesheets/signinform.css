@@ -1,9 +1,45 @@
 .signin-form{
+    margin: 10px;
+    padding-top: 5px;
     display: flex;
     justify-content: center;
-    width: 500px;
+    /* width: 500px; */
     height: 100px;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    /* vertical-align: top; */
+    /* float: right; */
 }
 .signinboxes{
-    margin: 3px
+    margin: 2px;
+    width: 120px;
+    padding: 5px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: #DCD6CC 1px solid;
+    color: #333333;
+    font: 'Lato', sans-serif
+    resize: none;
+    
+}
+
+#submitbox{
+    background-color: #382110;
+    border: 1px solid #382110;
+    color: white;
+    font-weight: normal;
+    border-radius: 3px;
+    border: 1px solid #D6D0C4;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    padding: 8px 12px;
+    height: 35px;
+    text-align: center;
+    
 }

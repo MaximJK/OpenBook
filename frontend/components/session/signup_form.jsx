@@ -28,14 +28,15 @@ class SignupForm extends React.Component {
 
                 <form onSubmit={this.handleSubmit} className="login-form-box">
 
-                    <div className="signin-form" >
+                    <div id="signup-form" >
+                        <h2 id="new">New here? Create a free account!</h2>
                         <label> 
-                            <input className="signupboxes" type="text" value={this.state.username} onChange={this.update('username')} placeholder="Username" />
+                            <input className="signup-input-boxes" type="text" value={this.state.username} onChange={this.update('username')} placeholder="Username" />
                         </label>
                         <label> 
-                            <input className="signupboxes" type="password" value={this.state.password} onChange={this.update('Password')} placeholder="Password" />
+                            <input className="signup-input-boxes" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" />
                         </label>
-                        <input className="signupboxes" type='submit' value='Sign Up' />
+                        <input id="signupbox" type='submit' value='Sign Up' />
                     </div>
                 </form>
             </div>

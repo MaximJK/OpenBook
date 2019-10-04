@@ -1,0 +1,43 @@
+#signup-form{
+display: block;
+}
+#new{
+    clear: both;
+    margin:  5px;
+    color: #000;
+    margin-top: 0px;
+    font: "Lato", sans-serif;
+    text-align: left;
+    font-size: 18px;
+    font-style: bold;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif, intial;
+}
+.signup-input-boxes{
+    width: 270px;
+    padding: 7px 5px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: lighter;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: #DCD6CC 1px solid;
+    color: #333333;
+    font-family: 'Lato', sans-serif, intial;
+    resize: none;
+    position: relative;
+    margin-top: 5px
+}
+
+#signupbox{
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #fdd05f;
+    font-size: 18px;
+    line-height: 22px;
+    width: 85px;
+    display: block;
+    position: relative;
+    margin-top: 5px;

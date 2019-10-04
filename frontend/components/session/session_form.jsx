@@ -35,7 +35,7 @@ render() {
       <label> 
             <input className="signinboxes" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" /> 
       </label>
-          <input className="signinboxes" type='submit' value="Sign Up"/>
+          <input id="submitbox" type='submit' value="Sign in "/>
     </div>
     </form>
     </div>
