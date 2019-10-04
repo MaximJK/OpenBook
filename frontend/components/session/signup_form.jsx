@@ -23,20 +23,19 @@ class SignupForm extends React.Component {
 
 
     render() {
-        debugger
         return (
             <div >
 
                 <form onSubmit={this.handleSubmit} className="login-form-box">
 
-                    <div className="login-form" >
-                        <label> Username:
-      <input type="text" value={this.state.username} onChange={this.update('username')} />
+                    <div className="signin-form" >
+                        <label> 
+                            <input className="signupboxes" type="text" value={this.state.username} onChange={this.update('username')} placeholder="Username" />
                         </label>
-                        <label> Password:
-      <input type="password" value={this.state.password} onChange={this.update('password')} />
+                        <label> 
+                            <input className="signupboxes" type="password" value={this.state.password} onChange={this.update('Password')} placeholder="Password" />
                         </label>
-                        <input type='submit' value='Sign Up' />
+                        <input className="signupboxes" type='submit' value='Sign Up' />
                     </div>
                 </form>
             </div>

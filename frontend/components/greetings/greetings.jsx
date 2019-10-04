@@ -6,7 +6,7 @@ const Greetings = ({ currentUser, logout }) => {
     debugger
     const personalGreeting = () => (
         <nav>
-            <h1>hello, {currentUser.username}</h1>
+            <h1>{currentUser.username}</h1>
             <button onClick={logout}>Log Out</button>
         </nav>
 

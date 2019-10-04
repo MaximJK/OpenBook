@@ -1,28 +1,45 @@
 .splash-all{
+    height: 370px;
+    background-image: url(https://s.gr-assets.com/assets/home/masthead_background.jpg);
+    margin: 0;
 }
-header{
+.splash-header{
     display: flex;
-    justify-content: space-between;
-    background-color: blanchedalmond;
+    justify-content: space-around;
+    /* background-color: blanchedalmond; */
     border: 10px, black;
-    height: 100px;
+    
+    /* height: 100px; */
+    /* border-bottom: 10px gray; */
+    /* margin: 0; */
 
 
 
 }
-.splash-title {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif"
+#splash-title {
+    margin-left: 100px;
+    font-size: 45px;
+    float: left;
+    /* font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif"; */
 }
 span.book{
     font-weight: bold;
   
 }
 .splash-login-container{
-
+    height: 100px;
+    /* background-color: brown */
 }
-.splash-slogan{
+.splash-signup-div{
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+}
+
+#splash-slogan{
 
 }
 .splash-signup-container{
 
 }
+

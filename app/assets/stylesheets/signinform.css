@@ -1,0 +1,9 @@
+.signin-form{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 100px;
+}
+.signinboxes{
+    margin: 3px
+}
