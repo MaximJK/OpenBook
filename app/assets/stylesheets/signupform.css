@@ -2,7 +2,6 @@
 display: block;
 }
 #new{
-    clear: both;
     margin:  5px;
     color: #000;
     margin-top: 0px;
@@ -11,7 +10,7 @@ display: block;
     font-size: 18px;
     font-style: bold;
     font-weight: normal;
-    font-family: 'Lato', sans-serif, intial;
+    font-family: 'Lato', sans-serif;
 }
 .signup-input-boxes{
     width: 270px;
@@ -24,10 +23,9 @@ display: block;
     border-radius: 3px;
     border: #DCD6CC 1px solid;
     color: #333333;
-    font-family: 'Lato', sans-serif, intial;
-    resize: none;
+    font-family: 'Lato', sans-serif;
     position: relative;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 #signupbox{
@@ -41,3 +39,4 @@ display: block;
     display: block;
     position: relative;
     margin-top: 5px;
+}

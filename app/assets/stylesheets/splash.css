@@ -2,29 +2,20 @@
     height: 370px;
     background-image: url(https://s.gr-assets.com/assets/home/masthead_background.jpg);
     margin: 0;
-    /* display: flex;
-    justify-content: space-between; */
+
 }
 .splash-header{
     display: flex;
     justify-content: center;
-    
-    /* background-color: blanchedalmond; */
-    /* border: 10px, black; */
-    
-    /* height: 100px; */
-    /* border-bottom: 10px gray; */
-    /* margin: 0; */
 
 
 
 }
 #splash-title {
-    /* margin-left: 155px; */
+
     margin-right: 450px;
     font-size: 40px;
-    /* float: left; */
-    /* font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif"; */
+   
     font: "Heebo", sans-serif;
     font-weight: 100;
     color: #4d2600;
@@ -37,25 +28,20 @@ span.book{
 .splash-login-container{
     height: 100px;
     margin-right: 85px;
-    /* margin-left: 0px; */
-    /* background-color: brown */
+
 }
 .splash-signup-div{
-    /* height: 500px; */
+
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
+
 }
 
 #splash-slogan{
     width: 446px;
-    Height: 116px;
+    height: 116px;
     margin-right: 135px;
 
 }
-.splash-signup-container{
-/* flex-direction: column */
-/* margin-right: 20px;
-margin-left: 35px; */
-}
+
 
