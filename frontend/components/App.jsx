@@ -1,8 +1,9 @@
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import GreetingsContainer from './greetings/greetings_container';
-import React from "react";
+import HomePageContainer from './homepage/home_page_container'
 import SplashContainer from './splash/splash_container'
+import React from "react";
 import { Provider } from 'react-redux';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
@@ -10,21 +11,22 @@ import {
     Redirect,
     Switch,
     Link,
+    withRouter,
     HashRouter
 } from 'react-router-dom';
 
 const App = () => (
+    <>
+    <header>
+        <ProtectedRoute exact path='/home' component={GreetingsContainer}/>
+    </header>
     <div>
-        <header>
-            {/* <GreetingsContainer/> */}
-            <SplashContainer/>
-        </header>
         <Switch>
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
-            
+            <Route exact path='/' component={SplashContainer}/>
+            <ProtectedRoute exact path='/home' component={HomePageContainer} />
         </Switch>
     </div>
+    </>
 );
 
-export default App;
+export default withRouter(App)

@@ -1,6 +1,6 @@
 import { HashRouter } from "react-router-dom";
 import React from "react";
-import App from './anythingelse';
+import App from './App';
 import { Provider } from "react-redux";
 
 const Root = ({ store }) => (

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const Greetings = ({ currentUser, logout }) => {
-    debugger
     const personalGreeting = () => (
         <nav>
             <h1>{currentUser.username}</h1>
@@ -12,15 +11,15 @@ const Greetings = ({ currentUser, logout }) => {
 
     );
 
-    const sessionlink = () => (
-        <nav>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign up</Link>
-        </nav>
-    );
+    // const sessionlink = () => (
+    //     <nav>
+    //         <Link to="/login">Login</Link>
+    //         <Link to="/signup">Sign up</Link>
+    //     </nav>
+    // );
 
-
-    return currentUser ? personalGreeting() : sessionlink();
+    return personalGreeting();
+    // return currentUser ? personalGreeting() : sessionlink();
 };
 
 export default Greetings;
