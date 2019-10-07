@@ -4,6 +4,7 @@ import Splash from './splash';
 const mapStateToProps = state => {
 
     return {
+        state
     }
 }
 
