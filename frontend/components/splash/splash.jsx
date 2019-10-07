@@ -19,7 +19,8 @@ const Splash = () =>  {
         </div>
     </div>
     <div className="books-splash">
-        <BooksIndexContainer />
+        <BooksIndexContainer
+         />
     </div>
     </div>
     )
