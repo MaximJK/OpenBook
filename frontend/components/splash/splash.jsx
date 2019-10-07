@@ -8,7 +8,7 @@ const Splash = () =>  {
         <div>
     <div className="splash-all">
             <header className="splash-header">
-                <div id="splash-title">open<span className="book">book</span> </div>
+                <div className="splash-title">open<span className="book">book</span> </div>
                 <div className="splash-login-container"> <LoginFormContainer /> </div>
         </header>
         <br/>

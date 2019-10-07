@@ -1,0 +1,10 @@
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f4f1ea;
+}
+#small-title{
+    font-size: 32px;
+    margin: 5px;
+}
