@@ -1,6 +1,6 @@
 export const RECEIVE_BOOKS = 'RECEIVE_BOOKS'
 export const RECEIVE_BOOK = 'RECEIVE_BOOK'
-import * as BooksUtil from "../util/books_util";
+import * as BooksUtil from "../util/books_api_util";
 
 const receiveBooks = () => ({
     type: RECEIVE_BOOKS,

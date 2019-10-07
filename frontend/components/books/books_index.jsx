@@ -27,3 +27,4 @@ class BooksIndex extends React.Component {
     
     }
 }
+export default BooksIndex;

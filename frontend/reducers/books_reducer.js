@@ -1,8 +1,8 @@
 import 
 { RECEIVE_BOOKS,
 RECEIVE_BOOK
- } from "../actions/books_actions";
- import merge from 'lodash/merge';
+ } from "../actions/book_actions";
+import merge from 'lodash/merge';
 
 export default (state = {}, action) => {
     Object.freeze(state);
@@ -15,5 +15,3 @@ export default (state = {}, action) => {
             return state;
     }
 };
-
-export default BooksReducer;

@@ -22,7 +22,7 @@ const App = () => (
     </header>
     <div>
         <Switch>
-            <Route exact path='/' component={SplashContainer}/>
+            <Route path='/' component={SplashContainer}/>
             <ProtectedRoute exact path='/home' component={HomePageContainer} />
         </Switch>
     </div>
