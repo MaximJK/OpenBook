@@ -1,11 +1,11 @@
 class Api::BooksController < ApplicationController
     def index
-        @books = Books.all
+        @books = Book.all
     end
     
     def show
         @book = Book.find(params[:id])
     end
 
-    has_many :bookshelves
+    private
 end

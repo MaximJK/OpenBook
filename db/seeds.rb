@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Table name: books
+#
+#  id         :bigint           not null, primary key
+#  title      :string           not null
+#  author     :string           not null
+#  body       :string
+#  cover_url  :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+
+Book.create!(:title => "",:author => "",:body => "",:cover_url => "")
