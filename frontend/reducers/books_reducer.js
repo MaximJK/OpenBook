@@ -8,9 +8,9 @@ export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_BOOKS:
-            return Object.merge({}, action.books)
+            return merge({}, action.books)
         case RECEIVE_BOOK:
-            return Object.merge({}, state, { [action.nook.id]: action.book })
+            return merge({}, state, { [action.nook.id]: action.book })
         default:
             return state;
     }

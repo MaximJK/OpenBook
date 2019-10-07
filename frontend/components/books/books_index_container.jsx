@@ -1,7 +1,9 @@
 import BooksIndex from './books_index';
 import { connect } from 'react-redux';
-const msp = (state) => {
-    return {posts: Object.keys(state.posts).map(id => state.books[id])
+import { fetchBooks } from '../../actions/book_actions'
+// debugger
+const msp = state => {
+    return {books: Object.keys(state.books).map(id => state.books[id])
     }
 }
 

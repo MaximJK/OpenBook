@@ -18,9 +18,9 @@ const Splash = () =>  {
         <div className="splash-signup-container"> <SignUpFormContainer /> </div >
         </div>
     </div>
-    {/* <div className="books-splash">
+    <div className="books-splash">
         <BooksIndexContainer />
-    </div> */}
+    </div>
     </div>
     )
 }

@@ -11,7 +11,7 @@ class BooksIndex extends React.Component {
         const books = this.props.books.map(book => {
             return (
                     <li>
-                        <img src={book.cover_url} />
+                        {/* <img src={book.cover_url} /> */}
                         {book.title}
                     </li>
             )

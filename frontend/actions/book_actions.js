@@ -14,15 +14,15 @@ const receiveBook = book => ({
 
 export const fetchBooks = () => dispatch => (
     BooksUtil.fetchBooks().then(books => (
-        dispatch(fetchBooks())
+        dispatch(receiveBooks(books))
     )
     )
 );
 
 
 export const fetchBook = id => dispatch => (
-    BooksUtil.fetchBooks(id).then(book => (
-        dispatch(fetchBooks(book))
+    BooksUtil.fetchBook(id).then(book => (
+        dispatch(receiveBook(book))
     )
     )
 );
