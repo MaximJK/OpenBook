@@ -44,4 +44,35 @@ span.book{
 
 }
 
+/* BOOK PREVIEW */
 
+.books-splash{
+/* display: flex;
+flex-direction: row;
+justify-content: flex-start; */
+}
+
+.books-div{
+}
+.books-uls{
+    list-style-type: none; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+.books-uls img{
+    max-height: 388px;
+    max-width: 261px;
+    margin: 10px;
+}
+
+.book-li{
+    margin: 30px;
+    width: 262px;
+    font-family: 'Lato', sans-serif;
+    font:'Lato', sans-serif;
+    text-align: center
+
+}

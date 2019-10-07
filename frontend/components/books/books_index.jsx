@@ -11,15 +11,16 @@ class BooksIndex extends React.Component {
     render() {
         const books = this.props.books.map(book => {
             return (
-                    <li>
+                    <li className="book-li">
                         <img src={book.cover_url} />
+                        <br/>
                         {book.title}
                     </li>
             )
         })
     return (
-        <div>
-            <ul>
+        <div className="books-div">
+            <ul className="books-uls">
                 {books}
             </ul>
         </div>
