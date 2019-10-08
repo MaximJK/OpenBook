@@ -7,5 +7,5 @@ class Book < ActiveRecord::Migration[5.2]
       t.string :cover_url, null: false
       t.timestamps
     end
-end
+  end
 end

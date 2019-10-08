@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 class BooksIndex extends React.Component {
     componentDidMount() {
-        debugger
+          
         this.props.fetchBooks();
     }
 

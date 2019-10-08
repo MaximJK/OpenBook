@@ -6,7 +6,7 @@ import merge from 'lodash/merge';
 
 const BooksReducer = (state = {}, action) => {
     Object.freeze(state);
-    debugger
+      
     switch (action.type) {
         case RECEIVE_BOOKS:
             return merge({}, action.books)
