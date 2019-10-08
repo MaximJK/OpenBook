@@ -1,0 +1,40 @@
+.book-show-row{
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Merriweather', serif;
+    align-items: flex-start;
+    
+
+
+}
+
+/* .column {
+    margin: 50px;
+    flex: 50%;
+} */
+.column img{
+    max-height: 212px;
+    max-width: 140px;
+    box-shadow: 2px 2px 4px #1d1c1c;
+    
+}
+#book-img{
+    margin-left: 450px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+#book-info{
+ max-width: 450px;
+ margin-top: 18px;
+/* margin: 0; */
+}
+#book-info h1{
+    
+    margin: 0;
+    padding:0;
+    /* line-height: 0; */
+}
+#book-title{
+    font-weight: bold;
+}

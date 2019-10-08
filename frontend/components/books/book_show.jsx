@@ -7,20 +7,34 @@ class BookShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.book.id != this.props.match.params.bookId) {
+        if (prevProps.match.params.bookId != this.props.match.params.bookId) {
             this.props.fetchBook(this.props.match.params.bookId);
         }
     }
-
+    debugger
     render() {
-        const { post } = this.props;
+        debugger
+        const { books } = this.props;
+        if (!books) {
+            return <div>Loading...</div>;
+        }
 
         return (
-            <div>
-                <h3>{books.title}</h3>
+            <div className="book-show-row">
+                <div className="column" id="book-img">
+                    <img src={books.cover_url} alt=""/>
+                    {/* bookshelf bar */}
+                    <div>
+                        want to read
+                    </div>
+                </div>
+                <div className="column" id="book-info">
+                <h1 id="book-title">{books.title}</h1>
+                <h3>by {books.author}</h3>
                 
-                <p>{book.body}</p>
+                <p>{books.body}</p>
                 <Link to="/home">Back to Index</Link>
+                </div>
             </div>
         );
     }
