@@ -16,4 +16,5 @@ class Book < ApplicationRecord
     validates :author, :cover_url, presence: true
 
      has_many :bookshelves
+     has_many :reviews
 end

@@ -1,20 +1,21 @@
-export const fetchReviews = () => (
+// INDEX SHOW DELETE UPDATEexport const fetchReviews = () => (
+export const fetchReviews = book_id => (    
     $.ajax({
         method: 'GET',
-        url: '/api/books/:book_id/reviews',
+        url: `/api/books/${book_id}/reviews`,
     })
 );
 
-export const fetchReview = id => (
+export const fetchReview = (id) => (
     $.ajax({
         method: 'GET',
-        url: `/api/books/:book_id/reviews/${id}`
+        url: `/api/reviews/${id}`
     })
 );
 
-export const createReview = review => (
+export const createReview = (review) => (
     $.ajax({
-        url: '/api/books/:book_id/reviews',
+        url: `/api/reviews`,
         method: 'POST',
         data: { review }
     })
