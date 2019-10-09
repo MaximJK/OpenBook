@@ -1,0 +1,101 @@
+
+#review-form{
+    display: flex;
+    font-family: "Merriweather", serif;
+    justify-content: flex-start;
+    margin-top: 35px;
+    margin-left: 450px;
+}
+
+#rating-eles{
+float: left;
+vertical-align: middle;
+height: 20px;
+/* position:relative; */
+
+}
+#my-rating {
+   vertical-align: bottom;
+  padding-bottom: 5px;
+  /* margin: 25px; */
+}
+.rate {
+    display: inline-block;
+    /* height: 46px; */
+    margin: 0;
+    padding: 0 8px;
+  vertical-align: bottom;
+  /* margin-bottom: 5px; */
+    
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:18px;
+    color:#ccc;
+    vertical-align: middle; margin: 0px
+    
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffae00;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #ffae00;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+#review-question{
+    margin-top: 30px;
+    clear: both;
+    margin-bottom: 5px; 
+}
+.review-text{
+    /* display: block; */
+    height: 235px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 720px;
+    box-shadow: 0 0 4px rgba(185,173,153,0.5);
+    border-color: #B9AD99;
+    outline: 0px;
+    font-family: "Merriweather", serif;
+    font-size: 14px;
+    line-height: 21px;
+    
+}
+.submit {
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #D6D0C4;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
+    background-color: #F4F1EA;
+    line-height: 1;
+    padding: 8px 12px;
+    margin-bottom: 45px;
+    margin-top: 25px;
+
+}
+.submit:hover{
+    color: #333333;
+    background-color: #ede6d6;
+    text-decoration: none;
+}

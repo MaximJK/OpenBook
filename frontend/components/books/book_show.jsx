@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CreateReviewFormContainer from '../reviews/create_review_form_container'
 
 class BookShow extends React.Component {
     componentDidMount() {
@@ -11,15 +12,16 @@ class BookShow extends React.Component {
             this.props.fetchBook(this.props.match.params.bookId);
         }
     }
-    debugger
+ 
     render() {
-        debugger
+     
         const { books } = this.props;
         if (!books) {
             return <div>Loading...</div>;
         }
 
         return (
+            <div>
             <div className="book-show-row">
                 <div className="column" id="book-img">
                     <img src={books.cover_url} alt=""/>
@@ -34,6 +36,13 @@ class BookShow extends React.Component {
                 
                 <p>{books.body}</p>
                 <Link to="/home">Back to Index</Link>
+                </div>
+                </div>
+                <div className='review-form-container'>
+                    <CreateReviewFormContainer/>
+                </div>
+                <div>
+                    
                 </div>
             </div>
         );

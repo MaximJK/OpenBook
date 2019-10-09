@@ -7,7 +7,7 @@ import {
 } from "../actions/review_actions";
 import merge from 'lodash/merge';
 
-const ReviewsReducer = (state = {}, action) => {
+export default (state = {}, action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -20,6 +20,6 @@ const ReviewsReducer = (state = {}, action) => {
             delete newState[action.reviewId];
             return newState;
         default:
-            return oldstate;
+            return state;
    }
 } 

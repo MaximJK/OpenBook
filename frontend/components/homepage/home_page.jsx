@@ -1,7 +1,12 @@
 import React from 'react';
+import BooksIndexContainer from "../books/books_index_container"
+
 const HomePage = () => {
 return (
-<h1>HOMEPAGE</h1>
+    <div className="books-splash">
+        <BooksIndexContainer
+        />
+    </div>
 )}
 
 export default HomePage
