@@ -32,7 +32,7 @@ export const updateReview = (review) => dispatch => (
 
 export const deleteReview = (id) => dispatch => (
     ReviewUtil.deleteReview(id).then(reviewId => (
-        dispatch(createReview(reviewId))
+        dispatch(destroyReview(reviewId))
     ))
 );
 const receiveReviews = reviews => ({
@@ -47,7 +47,7 @@ const receiveReview = review => ({
 
 
 
-const deleteReview = reviewId => ({
+const destroyReview = reviewId => ({
     type: DELETE_REVIEW,
     reviewId
 });
