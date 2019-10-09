@@ -12,7 +12,7 @@ export const fetchReviews = book_id => dispatch => (
     ))
 );
 
-export const fetchReview = ( id) => dispatch => (
+export const fetchReview = (id) => dispatch => (
     ReviewUtil.fetchReview(id).then(review => (
         dispatch(receiveReview(review))
     ))
@@ -45,15 +45,7 @@ const receiveReview = review => ({
     review
 });
 
-const createReview = review => ({
-    type: CREATE_REVIEW,
-    review
-});
 
-const updateReview = review => ({
-    type: UPDATE_REVIEW,
-    review
-});
 
 const deleteReview = reviewId => ({
     type: DELETE_REVIEW,
