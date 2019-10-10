@@ -7,8 +7,10 @@ const Greetings = ({ currentUser, logout }) => {
         <nav>
             <div className="nav-bar">
             <div id="small-title" className="splash-title">open<span className="book">book</span> </div>
-            <h1>{currentUser.username}</h1>
+            <div className='user-nav'>
+            <h1 id='username'>{currentUser.username}</h1>
             <button onClick={logout}>Log Out</button>
+            </div>
             </div>
         </nav>
 

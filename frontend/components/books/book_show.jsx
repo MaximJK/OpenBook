@@ -3,40 +3,43 @@ import { Link } from 'react-router-dom';
 import CreateReviewFormContainer from '../reviews/create_review_form_container'
 import ReviewsIndex from '../reviews/reviews_index'
 class BookShow extends React.Component {
-
+    // constructor(props) {
+    //     super(props);
+    // }
     componentDidMount() {
         debugger
-        this.props.fetchReviews(Number(this.props.match.params.bookId));
         this.props.fetchBook(this.props.match.params.bookId);
+        this.props.fetchReviews(Number(this.props.match.params.bookId));
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.match.params.bookId != this.props.match.params.bookId) {
-    //         this.props.fetchBook(this.props.match.params.bookId);
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.bookId != this.props.match.params.bookId) {
+            this.props.fetchBook(this.props.match.params.bookId);
+        }
+    }
  
     render() {
      debugger
-        const { books } = this.props;
+        let { books } = this.props;
         if (!books) {
             return <div>Loading...</div>;
         }
-        const { review } = this.props;
+        let { reviews } = this.props;
         if (!reviews) {
-        const reviews = this.props.reviews.map(review => {
+            reviews = ''
+        }
+        else {
+            reviews = this.props.reviews.map(review => {
             return (
                 <ReviewsIndex 
-                key={review.id}
-                review={review} />
+                key={reviews.id}
+                review={reviews} />
             )
 
         })}
-        else {
-            const reviews = ''
-        }
 
         return (
+            <>
             <div>
             <div className="book-show-row">
                 <div className="column" id="book-img">
@@ -63,6 +66,7 @@ class BookShow extends React.Component {
                     </ul>
                 </div>
             </div>
+            </>
         );
     }
 }
