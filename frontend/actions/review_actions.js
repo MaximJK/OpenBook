@@ -20,7 +20,7 @@ export const fetchReview = (id) => dispatch => (
 
 export const createReview = (review) => dispatch => (
     ReviewUtil.createReview(review).then(review => (
-        dispatch(reviewReview(review))
+        dispatch(receiveReview(review))
     ))
 );
 
@@ -36,7 +36,7 @@ export const deleteReview = (id) => dispatch => (
     ))
 );
 const receiveReviews = reviews => ({
-    type: RECEIVE_REVIEWs,
+    type: RECEIVE_REVIEWS,
     reviews
 });
 

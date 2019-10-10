@@ -5,6 +5,12 @@ export const signup = user => {
         data: { user }
     });
 }
+export const receiveUser = id => {
+    return $.ajax({
+        url: "/api/users",
+        method: "GET"
+    })
+}
 
 export const login = user => {
     return $.ajax({

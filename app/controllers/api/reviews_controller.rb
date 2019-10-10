@@ -1,10 +1,11 @@
 class Api::ReviewsController < ApplicationController
     def show
         @review = Review.find(params[:id])
+
     end
 
     def index
-        @reviews = Review.find(params[:book_id])
+        @reviews = Review.where(book_id: params[:book_id])
     end
 
     def create
@@ -13,7 +14,7 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json: @post.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
@@ -23,7 +24,7 @@ class Api::ReviewsController < ApplicationController
         if @review.destroy
             render :show
         else
-            render json: @post.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
@@ -32,13 +33,13 @@ class Api::ReviewsController < ApplicationController
         if @review.destroy
             render :show
         else
-            render json: @post.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
     private
 
     def review_params
-        params.require(:review).permit(:user_id, :book_id, :body, :rating)
+        params.require(:review).permit(:book_id, :user_id, :body, :rating)
     end
 end
