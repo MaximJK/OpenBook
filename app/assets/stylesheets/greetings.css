@@ -1,5 +1,5 @@
 .nav-bar{
-    display:flex;
+    display:inline-flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #f4f1ea;
@@ -9,14 +9,13 @@
     font:'Lato', sans-serif;
 }
 #username{
-    inline-flex
-    font-family: 'Heebo', sans-serif;
+
 }
 #small-title{
     font-size: 32px;
-    /* margin: 5px; */
+
 }
 #user-nav{
-    display: inline-flex;
+
 
 }
