@@ -1,0 +1,30 @@
+.reviews-li{
+    display: inline-block;
+    /* display: flex; */
+    font-family: "Merriweather", serif;
+    /* justify-content: center; */
+    margin-top: 35px;
+    margin-left: 410px;
+    width: 725px;
+    list-style: none;
+    border-bottom: 1px solid rgb(242, 242, 244) 
+}
+.review-div{
+   
+}
+.review-header{
+
+}
+.review-body{
+
+}
+.created{
+    float: right;
+    color: lightslategray;
+    vertical-align:middle;
+    line-height: 38px;
+}
+.stars{
+    font-size: 25px;
+    color: rgb(252, 94, 59)
+}

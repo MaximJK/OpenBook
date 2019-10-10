@@ -1,5 +1,5 @@
 .nav-bar{
-    display:inline-flex;
+    display:flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #f4f1ea;
@@ -9,13 +9,37 @@
     font:'Lato', sans-serif;
 }
 #username{
-
+    margin-right: 20px;
 }
 #small-title{
     font-size: 32px;
-
+    display: inline-block;
+    text-align: center;
 }
 #user-nav{
+text-align: center;
 
-
+}
+#logout{
+    font-size: 10px;
+    border-radius: 3px;
+    border: 1px solid #D6D0C4;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
+    background-color: #F4F1EA;
+    /* line-height: 1; */
+    padding: 6px 10px;
+    /* margin-bottom: 45px;
+    margin-top: 25px; */
+}
+#logout:hover{
+     color: #333333;
+    background-color: #ede6d6;
+    text-decoration: none;
+}
+.block{
+    display: inline-block;
+    text-align: center;
 }

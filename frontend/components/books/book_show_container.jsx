@@ -4,10 +4,10 @@ import { fetchBook } from '../../actions/book_actions';
 import { fetchReviews } from '../../actions/review_actions'
 // debugger
 const mapStateToProps = (state, ownProps) => {
-    debugger
+
     return {
     books: state.entities.books[ownProps.match.params.bookId],
-    reviews: state.entities.reviews[ownProps.match.params.reviewId]
+    reviews: state.entities.reviews
 }};
 
 const mapDispatchToProps = dispatch => ({

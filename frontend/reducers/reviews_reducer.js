@@ -8,11 +8,13 @@ import {
 import merge from 'lodash/merge';
 
 export default (state = {}, action) => {
+    
     Object.freeze(state);
 
 
     switch (action.type) {
         case RECEIVE_REVIEWS:
+            
             return merge({}, action.reviews)
         case RECEIVE_REVIEW:
             return merge({}, state, { [action.review.id]: action.review})
