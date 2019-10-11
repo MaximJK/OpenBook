@@ -16,6 +16,6 @@ OpenBook was built using a React-Redux frontend architecture with a Ruby on Rail
 
 Users can create an account, or log in to one of they've already created. Once authorized users can browse, rate and review books. Users can save books they like to their bookshelves, filing them as 'read', 'to-read, or 'currently-reading'. Future functions include adding a social aspect such as viewing other users bookshelves and liking reviews.
 
-![alt text](https://ibb.co/LnfwyPG)
+![alt text](https://ibb.co/LnfwyPG "Screenshots")
 ![alt text](https://ibb.co/d571R7v "Screenshots")
 
