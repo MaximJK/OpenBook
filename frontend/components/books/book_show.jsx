@@ -61,7 +61,8 @@ class BookShow extends React.Component {
                     <img src={books.cover_url} alt=""/>
                     {/* bookshelf bar */}
                     <div>
-                        want to read
+                        <button id='bookshelf-button' className="submit" >want to read</button>
+                     
                     </div>
                 </div>
                 <div className="column" id="book-info">
@@ -69,7 +70,7 @@ class BookShow extends React.Component {
                 <h3>by {books.author}</h3>
                 
                 <p>{books.body}</p>
-                <Link to="/home">Back to Index</Link>
+                <Link className="links" to="/home">Back to Index</Link>
                 </div>
                 </div>
                 <div className='review-form-container'>
