@@ -12,6 +12,7 @@ class Api::BookshelfBooksController < ApplicationController
 
 private
 
-def bookshelfBook_params
-    params.require(:bookshelfBook).permit(:book_id, :bookshelf_id)
+    def bookshelfBook_params
+        params.require(:bookshelfBook).permit(:book_id, :bookshelf_id)
+    end
 end
