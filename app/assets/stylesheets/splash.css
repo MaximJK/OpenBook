@@ -66,6 +66,7 @@ justify-content: flex-start; */
     max-height: 388px;
     max-width: 261px;
     margin: 10px;
+    box-shadow: 2px 2px 4px #1d1c1c;
 }
 
 .book-li{

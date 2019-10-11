@@ -15,6 +15,6 @@ class Book < ApplicationRecord
     validates :title, presence: true, uniqueness: true
     validates :author, :cover_url, presence: true
 
-     has_many :bookshelves
      has_many :reviews
+     has_many :bookshelves, through: :bookshelf_books
 end

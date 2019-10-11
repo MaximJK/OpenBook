@@ -1,14 +1,12 @@
 # == Schema Information
 #
-# Table name: reviews
+# Table name: bookshelf_books
 #
-#  id         :bigint           not null, primary key
-#  user_id    :integer          not null
-#  book_id    :integer          not null
-#  body       :string           not null
-#  rating     :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :bigint           not null, primary key
+#  book_id      :integer          not null
+#  bookshelf_id :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

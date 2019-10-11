@@ -9,6 +9,7 @@ const Greetings = ({ currentUser, logout }) => {
             <div id="small-title" className="splash-title">open<span className="book">book</span> </div>
             <div id='user-nav'>
             <h1 className='block' id='username'>{currentUser.username}</h1>
+                    <Link to={`/bookshelves/${currentUser.id}`}>Your Bookshelves</Link>
                     <button className='block' id='logout' onClick={logout}>Log Out</button>
             </div>
             </div>
