@@ -9,7 +9,7 @@ class BookshelfIndex extends React.Component {
         debugger
         this.props.fetchBookshelves(this.props.userId);
         if (this.props.bookshelves.book_ids) {
-        this.props.bookshelves.book_ids.forEach(id => {
+            this.props.bookshelves.book_ids.forEach(id => {
             this.props.fetchBook(id)
         });
     }}
@@ -17,7 +17,7 @@ class BookshelfIndex extends React.Component {
     render() {
         let { books } = this.props
         let { bookshelves } = this.props;
-        if (Object.keys(books).length == 0 || !books) {
+        if ( !books || Object.keys(books).length == 0) {
             books = ''
         }
         else {
@@ -30,6 +30,7 @@ class BookshelfIndex extends React.Component {
                 )
             }
             )}
+        
 
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
@@ -39,11 +40,8 @@ class BookshelfIndex extends React.Component {
             return (
                 <li >
                     {bookshelf.name}
-                    
-
                 </li>
-            )
-        })}
+            )})}
         return (
             <div className="bookshelf-div">
                 <ul className="bookshelf-uls">

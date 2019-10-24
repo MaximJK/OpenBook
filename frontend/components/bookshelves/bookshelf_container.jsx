@@ -8,14 +8,13 @@ const msp = (state, ownProps) => {
     return {
         userId: state.session.id,
         bookshelves: state.entities.bookshelves,
-        books: state.entities.books
+        // books: state.entities.books
     }
 }
 
 const mdp = (dispatch) => ({
     fetchBookshelves: id => dispatch(fetchBookshelves(id)),
     fetchBook: id => dispatch(fetchBook(id)),
-
 });
 
 
