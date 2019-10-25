@@ -61,7 +61,7 @@ class BookShow extends React.Component {
                     <img src={books.cover_url} alt=""/>
                     {/* bookshelf bar */}
                     <div>
-                        <button id='bookshelf-button' className="submit" >want to read</button>
+                        <button id='bookshelf-button' onClick={this.props.addBook(this.props.books.id)} className="submit" >want to read</button>
                      
                     </div>
                 </div>
