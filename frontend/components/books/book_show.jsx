@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CreateReviewFormContainer from '../reviews/create_review_form_container'
 import ReviewsIndex from '../reviews/reviews_index'
+import AddBookForm from '../bookshelves/add_book_form';
 class BookShow extends React.Component {
     printStars(rating) {
         let x = ''
@@ -14,6 +15,8 @@ class BookShow extends React.Component {
         debugger
         this.props.fetchBook(this.props.match.params.bookId);
         this.props.fetchReviews(Number(this.props.match.params.bookId));
+        this.props.fetchBookshelves(this.props.userId);
+        
     }
 
     componentDidUpdate(prevProps) {
@@ -23,8 +26,28 @@ class BookShow extends React.Component {
     }
  
     render() {
-     
+        let { bookshelves } = this.props
         let { books } = this.props;
+        debugger
+        if (Object.keys(bookshelves).length === 0 || !bookshelves) {
+            bookshelves = ''
+        }
+        else {
+            debugger
+            bookshelves = Object.values(bookshelves).map(bookshelf => {
+                return (
+
+                    <AddBookForm
+                    key={bookshelf.name}
+                    book_id={books.id}
+                    bookshelf_id={bookshelf.id}
+                    name={bookshelf.name}
+                    addBook={this.props.addBook}
+                    />
+
+                )
+            })
+        }
         if (!books) {
             return <div>Loading...</div>;
         }
@@ -60,10 +83,10 @@ class BookShow extends React.Component {
                 <div className="column" id="book-img">
                     <img src={books.cover_url} alt=""/>
                     {/* bookshelf bar */}
-                    <div>
-                        <button id='bookshelf-button' onClick={this.props.addBook(this.props.books.id)} className="submit" >want to read</button>
+                    <ul>
+                        {bookshelves}
                      
-                    </div>
+                    </ul>
                 </div>
                 <div className="column" id="book-info">
                 <h1 id="book-title">{books.title}</h1>

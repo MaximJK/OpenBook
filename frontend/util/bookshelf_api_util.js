@@ -6,11 +6,12 @@ export const fetchBookshelves = (user_id) => {
 
     });
 }
-export const addBook = (book_id, bookshelf_id) => {
+debugger
+export const addBook = bookshelfBook => {
     return $.ajax({
         url: `/api/bookshelf_books`,
         method: "POST",
-        data: { book_id, bookshelf_id }
+        data: { bookshelfBook }
     })
 }
 

@@ -11,6 +11,6 @@
 
 class BookshelfBook < ApplicationRecord
     validates :book_id, :bookshelf_id, presence: true
-    belongs_to :books
-    belongs_to :bookshelves
+    belongs_to :books, optional: true
+    belongs_to :bookshelves, optional: true
 end

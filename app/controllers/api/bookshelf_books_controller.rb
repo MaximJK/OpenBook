@@ -1,6 +1,12 @@
 class Api::BookshelfBooksController < ApplicationController
     def create
-    @bookshelfBook = BookshelfBook.create(bookshelf_book_params)
+        @bookshelfBook = BookshelfBook.new(bookshelf_book_params)
+
+        if @bookshelfBook.save!
+            render :show
+        else
+            render json: @bookshelfBook.errors.full_messages, status: 422
+        end
     end
 
     def delete
@@ -10,7 +16,7 @@ class Api::BookshelfBooksController < ApplicationController
 
 
 
-private
+    private
 
     def bookshelf_book_params
         params.require(:bookshelfBook).permit(:book_id, :bookshelf_id)

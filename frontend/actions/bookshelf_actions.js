@@ -6,8 +6,8 @@ export const fetchBookshelves = userId => dispatch => (
     BookshelfUtil.fetchBookshelves(userId).then(bookshelves =>
     dispatch(receiveBookshelves(bookshelves)))
 )
-export const addBook = (book_id, bookshelf_id) => dispatch => (
-    BookshelfUtil.addBook(book_id, bookshelf_id).then(book =>
+export const addBook = bookshelfBook => dispatch => (
+    BookshelfUtil.addBook(bookshelfBook).then(book =>
     dispatch(postBook(book)))
 )
 
