@@ -14,6 +14,12 @@ class Api::BookshelfBooksController < ApplicationController
         @bookshelfBook.destroy
     end
 
+    def show
+        @bookshelfBook = BookshelfBook.find(params[:id]))
+        render :show
+    end
+
+
 
 
     private

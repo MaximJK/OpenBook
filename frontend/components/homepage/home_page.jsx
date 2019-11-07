@@ -1,12 +1,28 @@
 import React from 'react';
 import BooksIndexContainer from "../books/books_index_container"
 
-const HomePage = () => {
-return (
-    <div className="books-splash">
-        <BooksIndexContainer
-        />
-    </div>
-)}
+
+class HomePage extends React.Component {
+
+    componentDidMount() {
+        debugger
+        this.props.fetchBookshelves(this.props.userId);
+        // if (this.props.bookshelves.book_ids) {
+        //     this.props.bookshelves.forEach(bookshelf => {
+        //         bookshelf.book_ids.forEach(bookId => {
+        //             this.props.fetchBook(bookId)
+                    
+        //         })
+
+            // });
+        }
+    
+    render() {
+    return (
+        <div className="books-splash">
+            <BooksIndexContainer
+            />
+        </div>
+    )}}
 
 export default HomePage

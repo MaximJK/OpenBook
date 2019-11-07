@@ -4,9 +4,10 @@ import { logout } from '../../actions/session_actions';
 import { fetchBook } from '../../actions/book_actions';
 import { fetchBookshelves } from '../../actions/bookshelf_actions';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = (state) => {
     return {
-        currentUser: users[session.id]
+        userId: state.session.id,
+        bookshelves: state.entities.bookshelves,
         
     }
 }
