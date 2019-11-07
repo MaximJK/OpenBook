@@ -13,11 +13,10 @@ export const addBook = bookshelfBook => {
         data: { bookshelfBook }
     })
 }
-export const removeBook = bookshelfBook => {
+export const removeBook = id => {
     return $.ajax({
-        url: `/api/bookshelf_books`,
+        url: `/api/bookshelf_books/${id}`,
         method: "DELETE",
-        data: { bookshelfBook }
     })
 }
 export const fetchBookshelfBook = bookshelfBookId => {

@@ -8,53 +8,45 @@ class BookshelfIndex extends React.Component {
     componentDidMount() {
         debugger
         this.props.fetchBookshelves(this.props.userId);
-        if (this.props.bookshelves.book_ids) {
-            this.props.bookshelves.forEach(bookshelf => {
-                bookshelf.book_ids.forEach(bookId => {
-                    this.props.fetchBook(bookId)
-                })
-            
-        });
-    }}
+    }
 
     render() {
-        let { books } = this.props
+        debugger
         let { bookshelves } = this.props;
-        if ( !books || books.length == 0) {
-            books = ''
-        }
-        else {
-            books = Object.values(this.props.books).map(book => {
-                return (
-                    <li className="book-li">
-                        <img src={book.cover_url}/>
-                        {book.name}
-                    </li>
-                )
-            }
-            )}
-        
-
+        let bookshelfNames
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
-        }
-        else {
-            bookshelves = Object.values(this.props.bookshelves).map(bookshelf => {
+        } else {
+            
+            debugger
+            bookshelfNames = Object.values(bookshelves).map(bookshelf => {
+                let bookTitles = bookshelf.book.map(bookX => {
+                    return (
+                        <li>
+                            <img src={bookX.cover_url} alt=""/>
+                            {bookX.title}
+                        </li>
+                    )
+                })
             return (
                 <li >
                     {bookshelf.name}
+                    <ul>
+                        
+                        {bookTitles}
+                        
+                    </ul>
                 </li>
-            )})}
+            )})};
         return (
             <div className="bookshelf-div">
                 <ul className="bookshelf-uls">
-                    {bookshelves}
-                    {books}
+                    {bookshelfNames}
                 </ul>
             </div>
 
         )
 
-    }
+    };
 }
 export default BookshelfIndex;

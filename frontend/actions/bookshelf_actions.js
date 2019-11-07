@@ -1,7 +1,7 @@
 import * as BookshelfUtil from "../util/bookshelf_api_util";
 export const RECEIVE_BOOKSHELVES = 'RECEIVE_BOOKSHELVES';
 export const POST_BOOK = 'POST_BOOK';
-export const RECEIVE_BOOKSHELFBOOK = 'RECEIVE_BOOKSHELFBOOK'
+export const REMOVE_BOOKSHELFBOOK = 'REMOVE_BOOKSHELFBOOK'
 
 export const fetchBookshelves = userId => dispatch => (
     BookshelfUtil.fetchBookshelves(userId).then(bookshelves =>
@@ -11,17 +11,20 @@ export const addBook = bookshelfBook => dispatch => (
     BookshelfUtil.addBook(bookshelfBook).then(bookshelfBook =>
         dispatch(postBook(bookshelfBook)))
 )
-export const fetchBookshelfBook = bookshelfBookId => (
-    BookshelfUtil.fetchBookshelfBook(bookshelfBookId).then(bookshelfBook =>
-        dispatch(receiveBookshelfBook(bookshelfBook))))
+
+export const removeBook = id => dispatch => (
+    BookshelfUtil.removeBook(id).then(bookshelfBook =>
+        dispatch(removeBookshelfBook(bookshelfBook)))
+)
+
 
 const receiveBookshelves = bookshelves => ({
     type: RECEIVE_BOOKSHELVES,
     bookshelves
 
 })
-const receiveBookshelfBook = bookshelfBook => ({
-    type: RECEIVE_BOOKSHELFBOOK,
+const removeBookshelfBook = bookshelfBook => ({
+    type: REMOVE_BOOKSHELFBOOK,
     bookshelfBook
 
 })

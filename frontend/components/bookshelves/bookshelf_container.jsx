@@ -1,7 +1,8 @@
 import BookshelfIndex from './bookshelf_index';
 import { connect } from 'react-redux';
-import { fetchBook } from '../../actions/book_actions'
-import { fetchBookshelves } from '../../actions/bookshelf_actions'
+import { fetchBookshelves,
+    removeBook } from '../../actions/bookshelf_actions'
+
 
 const msp = (state, ownProps) => {
     debugger
@@ -14,7 +15,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => ({
     fetchBookshelves: id => dispatch(fetchBookshelves(id)),
-    fetchBook: id => dispatch(fetchBook(id)),
+    removeBook: id
 });
 
 

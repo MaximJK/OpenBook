@@ -3,7 +3,9 @@ class Api::BookshelfBooksController < ApplicationController
         @bookshelfBook = BookshelfBook.new(bookshelf_book_params)
 
         if @bookshelfBook.save!
+            
             render :show
+
         else
             render json: @bookshelfBook.errors.full_messages, status: 422
         end
