@@ -5,17 +5,15 @@ import { fetchBookshelves,
 
 
 const msp = (state, ownProps) => {
-    debugger
     return {
         userId: state.session.id,
         bookshelves: state.entities.bookshelves,
-        // books: state.entities.books
     }
 }
 
 const mdp = (dispatch) => ({
     fetchBookshelves: id => dispatch(fetchBookshelves(id)),
-    removeBook: id
+    removeBook: id => dispatch(removeBook(id))
 });
 
 

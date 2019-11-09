@@ -3,29 +3,37 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ShowBookshelf from './show_bookshelf';
 
 class BookshelfIndex extends React.Component {
     componentDidMount() {
-        debugger
+        
         this.props.fetchBookshelves(this.props.userId);
     }
-
+    
+  
     render() {
-        debugger
+        
         let { bookshelves } = this.props;
         let bookshelfNames
+        debugger
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
         } else {
             
-            debugger
+            
             bookshelfNames = Object.values(bookshelves).map(bookshelf => {
-                let bookTitles = bookshelf.book.map(bookX => {
+                let bookTitles = bookshelf.book.map((bookX, i) => {
                     return (
-                        <li>
-                            <img src={bookX.cover_url} alt=""/>
-                            {bookX.title}
-                        </li>
+                        <ShowBookshelf
+                        key={bookX.bookshelfBook + i}
+                        cover={bookX.data.cover_url}
+                        id={bookX.data.id}
+                        title={bookX.data.title}
+                        removeBook={this.props.removeBook}
+                        bookshelf={bookX.bookshelfBook}
+                        />
+                      
                     )
                 })
             return (

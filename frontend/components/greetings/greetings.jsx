@@ -7,13 +7,15 @@ const Greetings = ({ currentUser, logout }) => {
         <>
         <nav>
             <div className="nav-bar">
+                    <Link to={'/home'}>
             <div id="small-title" >open<span className="book">book</span> </div>
+            </Link>
                <div id="searchbar-box">
                 <input className="searchBox__input" type="text" placeholder="Search books" />
             </div>
             <div id='user-nav'>
             <h1 className='block' id='username'>{currentUser.username}</h1>
-                    <Link className='bookshelf' to={`/bookshelves/${currentUser.id}`}>Your Bookshelves</Link>
+                    <Link className='bookshelf' to={`/bookshelves/${currentUser.id}`}>Bookshelves</Link>
                     <button className="block" id='logout' onClick={logout}>Log Out</button>
             </div>
             </div>

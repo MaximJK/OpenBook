@@ -24,6 +24,7 @@ class BookShow extends React.Component {
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.bookId != this.props.match.params.bookId) {
             this.props.fetchBook(this.props.match.params.bookId);
+            debugger
         }
     }
 
@@ -34,22 +35,22 @@ class BookShow extends React.Component {
         let { bookshelves } = this.props;
         if (!books) {
             return <div>Loading...</div>;
-        } else {
-            debugger
-            let bookshelfStatus = []
-            books.bookshelves.forEach(bookshelf => {
-                if (bookshelf.user_id == this.props.userId) {
-                    bookshelfStatus.push(bookshelf)
-                }
-            })
         }
+        //     debugger
+        //     let bookshelfStatus = []
+        //     books.bookshelves.forEach(bookshelf => {
+        //         if (bookshelf.user_id == this.props.userId) {
+        //             bookshelfStatus.push(bookshelf)
+        //         }
+        //     })
+        // }
         debugger
         if (bookshelves.length === 0 || !bookshelves) {
             bookshelves = ''
         }
         else {
             // const currentBookshelf = 
-            debugger
+            
             bookshelves = Object.values(bookshelves).map(bookshelf => {
                 return (
 

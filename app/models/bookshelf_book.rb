@@ -14,3 +14,4 @@ class BookshelfBook < ApplicationRecord
     belongs_to :book, optional: true
     belongs_to :bookshelf, optional: true
 end
+

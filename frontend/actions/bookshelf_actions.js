@@ -14,7 +14,7 @@ export const addBook = bookshelfBook => dispatch => (
 
 export const removeBook = id => dispatch => (
     BookshelfUtil.removeBook(id).then(bookshelfBook =>
-        dispatch(removeBookshelfBook(bookshelfBook)))
+        dispatch(removeBookshelfBook(id)))
 )
 
 
@@ -23,9 +23,9 @@ const receiveBookshelves = bookshelves => ({
     bookshelves
 
 })
-const removeBookshelfBook = bookshelfBook => ({
+const removeBookshelfBook = id => ({
     type: REMOVE_BOOKSHELFBOOK,
-    bookshelfBook
+    id: id
 
 })
 

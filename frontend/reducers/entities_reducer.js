@@ -6,7 +6,7 @@ import BookshelvesReducer from "./bookshelves_reducer";
 import BookshelvesBooksReducer from "./bookshelf_book_reducer"
   
 const entitiesReducer = combineReducers({
-  users: UsersReducer, books: BooksReducer, reviews: ReviewsReducer, bookshelves: BookshelvesReducer, bookshelf_book: BookshelvesBooksReducer
+  users: UsersReducer, books: BooksReducer, reviews: ReviewsReducer, bookshelves: BookshelvesReducer, bookshelfBook: BookshelvesBooksReducer
 });
 
 export default entitiesReducer;

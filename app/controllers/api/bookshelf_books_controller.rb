@@ -11,13 +11,13 @@ class Api::BookshelfBooksController < ApplicationController
         end
     end
 
-    def delete
-        @bookshelfBook = BookshelfBook.find_by(params[:id])
+    def destroy
+        @bookshelfBook = BookshelfBook.find_by(params[:book_id])
         @bookshelfBook.destroy
     end
 
     def show
-        @bookshelfBook = BookshelfBook.find(params[:id]))
+        @bookshelfBook = BookshelfBook.find(params[:id])
         render :show
     end
 
