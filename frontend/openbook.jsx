@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore();
     }
     
+    
     // test
     window.utils = utils
     window.getState = store.getState;
