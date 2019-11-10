@@ -1,21 +1,25 @@
 .nav-bar{
     display:flex;
-    /* flex-direction: row; */
+    
     justify-content: space-between;
     background-color: #f4f1ea;
-    height: 50px;
+    height: 4%;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     align-items: center;
+    flex-wrap: nowrap;
     font:'Lato', sans-serif;
     vertical-align: baseline;
     position: fixed;
     top: 0;
     width: 100%;
+    overflow: hidden;
 }
 
 #username{
     margin-right: 20px;
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #382110;
 }
 #small-title{
     font-size: 32px;
@@ -32,6 +36,7 @@
 #user-nav{
 text-align: bottom;
 width: 100%;
+font-family: 'Lato', sans-serif
 /* height: 20px; */
 
 }
@@ -62,16 +67,28 @@ width: 100%;
     text-align: center;
 }
 
-.bookshelf{
+#bookshelf{
+    height: fit-content;
     margin-right: 20px;
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgb(78, 12, 1);
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+}
+#bookshelf:hover{
+    color: white;
+    background-color: #382110;
+}
+.links{
+    /* text-decoration: underline; */
     color: rgb(78, 12, 1);
     font-size: 15px;
 }
-.links{
-    text-decoration: underline;
-    color: rgb(78, 12, 1);
-    font-size: 15px;
+#booksdiv{
 }
 .searchBox__input{
         background: #FFFFFF;

@@ -19,8 +19,10 @@ class Greetings extends React.Component {
                 </div>
                 <div id='user-nav'>
                 <h1 className='block' id='username'>{this.props.currentUser.username}</h1>
-                            <Link className='bookshelf' to={`/bookshelves/${this.props.currentUser.id}`}>Bookshelves</Link>
-                            <button className="block" id='logout' onClick={this.props.logout}>Log Out</button>
+                
+                <Link id='bookshelf' to={`/bookshelves/${this.props.currentUser.id}`}>My Books</Link>
+                
+                <button className="block" id='logout' onClick={this.props.logout}>Log Out</button>
                 </div>
                 </div>
             </nav>
