@@ -97,16 +97,14 @@ class BookShow extends React.Component {
                 <div className="column" id="book-img">
                     <img src={books.cover_url} alt=""/>
                     {/* bookshelf bar */}
-                    <div class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn">Add to Bookshelf
-                        <i class="fa fa-caret-down"></i>
+                    <div className="dropdown">
+                        <button className="dropbtn">Add to Bookshelf
+                        <i className="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-content">
+                        <ul className="dropdown-content">
                         {bookshelves}   
-                        </div>
-                        </div>
-                </div>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="column" id="book-info">

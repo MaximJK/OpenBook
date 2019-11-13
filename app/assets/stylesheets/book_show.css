@@ -3,6 +3,7 @@
     justify-content: flex-start;
     font-family: 'Merriweather', serif;
     align-items: flex-start;
+    margin-top: 55px;
     
 
 
@@ -43,6 +44,6 @@
 }
 #bookshelf-button{
     position: relative;
-    left: 16px;
+    left: 21px;
     margin-top: 20px;
 }

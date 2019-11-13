@@ -7,14 +7,20 @@ const showBookshelf = props => {
     let id = props.bookshelf
     return (
     
-        <li>
+        <li className='bookshelf-li'>
             <Link to={`/books/${props.id}`}>
             <img src={props.cover} alt="" />
+            </Link>
+            <Link to={`/books/${props.id}`} className='bookshelfTitle'>
             {props.title}
             </Link>
-            <button onClick={() => {
+            <Link to={`/books/${props.id}`} className='bookshelfAuthor'>
+            {props.author}
+            </Link>
+            
+            <i className="fas fa-times" onClick={() => {
                 props.removeBook(id)
-            }}> remove </button>
+            }} ></i> 
         </li>
     )
 

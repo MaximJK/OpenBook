@@ -32,10 +32,16 @@ class BookshelfIndex extends React.Component {
                         title={bookX.data.title}
                         removeBook={this.props.removeBook}
                         bookshelf={bookX.bookshelfBook}
+                        author={bookX.data.author}
                         />
                       
                     )
                 })
+                if (bookTitles.length === 0) {
+                    bookTitles = <Link to={'/home'}> add books </Link>;
+                    
+
+                }
             return (
                 <li >
                     {bookshelf.name}

@@ -50,6 +50,7 @@ span.book{
 /* display: flex;
 flex-direction: row;
 justify-content: flex-start; */
+margin-top: 55px
 }
 
 .books-div{
@@ -65,7 +66,6 @@ justify-content: flex-start; */
 .books-uls img{
     max-height: 388px;
     max-width: 261px;
-    margin: 10px;
     box-shadow: 2px 2px 4px #1d1c1c;
 }
 

@@ -1,0 +1,74 @@
+
+
+.bookshelf-div{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.bookshelf-uls{
+width:700px;
+list-style: none;
+font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+}
+.bookshelf-uls > li{}
+.bookshelf-uls > li > ul{
+list-style: none;
+width: 500px;
+ }
+
+.bookshelf-uls > li > ul > li{
+padding: 5px 10px;
+border-bottom: 1px solid #eee;
+border-top: 1px solid #eee;
+margin-left: 60px;
+}
+
+.bookshelf-uls img {
+    max-height: 73px;
+    max-width: 48px; 
+}
+.bookshelf-li {
+
+color: #00635d;
+text-decoration: none;
+display: table;
+table-layout : fixed;
+height: 75px;
+width: auto;
+;
+}
+.bookshelfAuthor, .bookshelfTitle{
+    width: 150px;
+}
+.bookshelf-li > a{
+vertical-align: top;
+display: table-cell;
+font-size: 14px;
+text-align: left;
+padding-left: 5px;
+font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+}
+.bookshelf-li > button{
+float: right;
+display: table-cell;
+}
+.fa, .fas {
+    font-weight: 700;
+    color: lightslategrey;
+    font-size: 15px;
+    cursor: pointer;
+}
+a, a:link, a:visited, a:focus, a:active{
+text-decoration: none;
+color: #00635d;
+
+
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
