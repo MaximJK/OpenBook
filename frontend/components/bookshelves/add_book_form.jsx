@@ -6,8 +6,8 @@ class AddBookForm extends React.Component {
         let bookshelfBook = { book_id: this.props.book_id, bookshelf_id: this.props.bookshelf_id }
         debugger
         return (  
-            <li> 
-            <button onClick={() => { this.props.addBook(bookshelfBook) }} > {this.props.name} </button>
+            <li onClick={() => { this.props.addBook(bookshelfBook) }}> 
+             {this.props.name}
             </li> 
         )
     }

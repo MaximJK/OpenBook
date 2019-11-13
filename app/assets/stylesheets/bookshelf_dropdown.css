@@ -3,7 +3,7 @@
   /* float: left; */
 
   width: 100%;
-  margin-left: 13px;
+  margin-left: 4px;
   margin-top: 8px;
   position: relative;
 }
@@ -46,14 +46,14 @@
   /* width: 100%; */
   visibility: hidden; /* hides sub-menu */
   opacity: 0;
-  right: 20px;
+  right: 5px;
   transform: translateY(-2em);
   z-index: -1;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
   text-align: left;
 }
 
-.dropdown-content li > button {
+.dropdown-content li {
     float: none;
     
     color: black;
@@ -97,5 +97,9 @@
   z-index: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s
+}
+
+.fa-caret-down{
+  margin-left: 7px;
 }
 

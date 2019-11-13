@@ -10,7 +10,11 @@
     border-bottom: 1px solid rgb(242, 242, 244) 
 }
 .review-div{
+    width: 800px;
    
+}
+.review-list{
+    width: 800px;
 }
 .review-header{
 
@@ -25,6 +29,6 @@
     line-height: 38px;
 }
 .stars{
-    font-size: 25px;
+    font-size: 15px;
     color: rgb(252, 94, 59)
 }

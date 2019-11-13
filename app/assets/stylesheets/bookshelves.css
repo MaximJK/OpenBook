@@ -55,7 +55,7 @@ font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
 float: right;
 display: table-cell;
 }
-.fa, .fas {
+.bookshelf-li > .fa {
     font-weight: 700;
     color: lightslategrey;
     font-size: 15px;

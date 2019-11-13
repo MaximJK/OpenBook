@@ -15,7 +15,9 @@ class BooksIndex extends React.Component {
                     <Link to={`/books/${book.id}`}> <img src={book.cover_url} />
                         <br/>
                     </Link>
+                    <Link to={`/books/${book.id}`}>
                         {book.title}
+                        </Link>
                     </li>
             )
         })
