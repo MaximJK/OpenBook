@@ -19,7 +19,7 @@ const BookshelvesReducer = (state = {}, action) => {
             debugger
             Object.values(newState).forEach(sBookshelf => {
                 for (var i = 0; i < sBookshelf.book.length; i++) {
-                    if (sBookshelf.book[i].bookshelfBook == action.id) {
+                    if (sBookshelf.book[i].id == action.id) {
                         sBookshelf.book.splice(i, 1); break;
                     }
                 }

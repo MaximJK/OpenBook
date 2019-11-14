@@ -21,17 +21,17 @@ class BookshelfIndex extends React.Component {
             bookshelves = ''
         } else {
             
-            
+            debugger
             bookshelfNames = Object.values(bookshelves).map(bookshelf => {
                 let bookTitles = bookshelf.book.map((bookX, i) => {
                     return (
                         <ShowBookshelf
-                        key={bookX.bookshelfBook + i}
+                        key={bookX.id + i}
                         cover={bookX.data.cover_url}
                         id={bookX.data.id}
                         title={bookX.data.title}
                         removeBook={this.props.removeBook}
-                        bookshelf={bookX.bookshelfBook}
+                        bookshelf={bookX.id}
                         author={bookX.data.author}
                         />
                       

@@ -9,6 +9,11 @@ class SessionForm extends React.Component {
       password: ""
     
     };
+    this.demo = {
+      username: "demo",
+      password: "demodemo"
+
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   update(field) {
@@ -39,6 +44,11 @@ render() {
           <input id="submitbox" type='submit' value="Sign in "/>
     </div>
     </form>
+      <form onSubmit={this.handleSubmit}>
+        <button className="demobox" onClick={() => {
+          this.props.processForm(this.demo).then(() => this.props.history.push("/home"))
+        }} type='submit' value="Demo" > Demo</button>
+        </form>
     </div>
   )  
 };
