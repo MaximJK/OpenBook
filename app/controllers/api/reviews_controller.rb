@@ -5,12 +5,13 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index
+    
         @reviews = Review.where(book_id: params[:book_id])
     end
 
     def create
         @review = Review.new(review_params)
-
+debugger
         if @review.save
             render :show
         else

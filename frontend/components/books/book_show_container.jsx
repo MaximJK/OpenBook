@@ -5,9 +5,8 @@ import { fetchReviews } from '../../actions/review_actions';
 import { addBook } from '../../actions/bookshelf_actions';
 
 import { fetchBookshelves } from '../../actions/bookshelf_actions'
-// debugger
 const mapStateToProps = (state, ownProps) => {
-debugger
+    debugger
     return {
     userId: state.session.id,
     books: state.entities.books[ownProps.match.params.bookId],

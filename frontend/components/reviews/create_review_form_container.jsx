@@ -6,10 +6,9 @@ import { createReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
-    let key = Object.keys(state.entities.books)[0]
-    const bkid = Number(key)
+    debugger
     const review =  {
-        book_id: bkid,
+        book_id: ownProps.bookId,
         user_id: state.session.id,
         body: '',
         rating: 0

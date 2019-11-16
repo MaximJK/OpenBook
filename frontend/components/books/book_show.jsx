@@ -22,7 +22,6 @@ class BookShow extends React.Component {
         return x
     }   
     componentDidMount() {
-        debugger
         this.props.fetchBook(this.props.match.params.bookId);
         this.props.fetchReviews(Number(this.props.match.params.bookId));
         this.props.fetchBookshelves(this.props.userId);
@@ -32,13 +31,11 @@ class BookShow extends React.Component {
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.bookId != this.props.match.params.bookId) {
             this.props.fetchBook(this.props.match.params.bookId);
-            debugger
         }
     }
 
  
     render() {
-        debugger
         let averageReview = 0;
         let ratingDiv = ''
         let numReviews
@@ -55,7 +52,6 @@ class BookShow extends React.Component {
         //         }
         //     })
         // }
-        debugger
         if (bookshelves.length === 0 || !bookshelves) {
             bookshelves = ''
         }
@@ -90,7 +86,6 @@ class BookShow extends React.Component {
             averageReview /= numReviews
             averageReview = (averageReview).toFixed(2)
             ratingDiv = this.printStars(averageReview)
-            debugger
             reviews = Object.values(this.props.reviews).map(review => {
             return (
             
@@ -139,7 +134,8 @@ class BookShow extends React.Component {
                 </div>
                 </div>
                 <div className='review-form-container'>
-                    <CreateReviewFormContainer/>
+                    <CreateReviewFormContainer
+                        bookId={books.id}/>
                 </div>
                 <div>
                     <ul className='review-list'>
