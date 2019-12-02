@@ -6,7 +6,6 @@ import { addBook } from '../../actions/bookshelf_actions';
 
 import { fetchBookshelves } from '../../actions/bookshelf_actions'
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return {
     userId: state.session.id,
     books: state.entities.books[ownProps.match.params.bookId],

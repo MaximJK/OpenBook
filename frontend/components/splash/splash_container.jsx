@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import Splash from './splash';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({errors}) => {
 
     return {
-        state
+        errors: errors.session
     }
 }
 

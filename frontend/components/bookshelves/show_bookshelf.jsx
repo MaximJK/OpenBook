@@ -3,7 +3,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const showBookshelf = props => {
-    debugger
     let id = props.bookshelf
     return (
     

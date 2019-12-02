@@ -96,3 +96,11 @@ height: 20px;
     background-color: #ede6d6;
     text-decoration: none;
 }
+.alreadyReviewed{
+    display: flex;
+    font-family: "Merriweather", serif;
+    justify-content: flex-start;
+    margin-top: 35px;
+    margin-left: 450px;
+}
+}

@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
       Bookshelf.create(user_id: @user.id, name: "Currently Reading")
       render "api/users/show"
     else
-      render json: @user.errors.full_messages
+      render json: @user.errors.full_messages, status: 422
     end
   end
   

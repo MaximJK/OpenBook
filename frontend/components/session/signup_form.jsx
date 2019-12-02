@@ -24,9 +24,12 @@ class SignupForm extends React.Component {
 
 
     render() {
+        let errors = this.props.errors
+        if (errors.length === 0 || errors === undefined) {
+            errors = ''
+        } 
         return (
-            <div >
-
+            <div>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div id="signup-form" >
                         <h2 id="new">New here? Create a free account!</h2>

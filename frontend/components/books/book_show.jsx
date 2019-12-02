@@ -5,7 +5,11 @@ import ReviewsIndex from '../reviews/reviews_index'
 import AddBookForm from '../bookshelves/add_book_form';
 
 class BookShow extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        
+        
+    }
     roundHalf(num) {
         return Math.round(num * 2) / 2;
     }
@@ -34,8 +38,19 @@ class BookShow extends React.Component {
         }
     }
 
+    reviewCheck(isReviewed, books_id) {
+        debugger
+        if (isReviewed === true) {
+            return <div className="alreadyReviewed"> You've already reviewed this book</div>
+        }
+        else {
+            return <CreateReviewFormContainer
+                bookId={books_id} />
+        }
+    }
  
     render() {
+        let isReviewed = false
         let averageReview = 0;
         let ratingDiv = ''
         let numReviews
@@ -73,20 +88,24 @@ class BookShow extends React.Component {
             })
         }
         let { reviews } = this.props;
+        debugger
         if (Object.keys(reviews).length === 0 || !reviews) {
             reviews = ''
 
         }
         else {
-            
-            Object.values(this.props.reviews).forEach(review => {
+            Object.values(reviews).forEach(review => {
                 averageReview += review.rating
+                if (review.user_id === this.props.userId){
+                    isReviewed = true
+                }
             })
-            numReviews = Object.values(this.props.reviews).length
+            numReviews = Object.values(reviews).length
             averageReview /= numReviews
             averageReview = (averageReview).toFixed(2)
             ratingDiv = this.printStars(averageReview)
-            reviews = Object.values(this.props.reviews).map(review => {
+            reviews = Object.values(reviews).map(review => {
+
             return (
             
                 // <ReviewsIndex 
@@ -134,8 +153,8 @@ class BookShow extends React.Component {
                 </div>
                 </div>
                 <div className='review-form-container'>
-                    <CreateReviewFormContainer
-                        bookId={books.id}/>
+                    
+                    {this.reviewCheck(isReviewed, books.id)}
                 </div>
                 <div>
                     <ul className='review-list'>

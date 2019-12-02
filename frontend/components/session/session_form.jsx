@@ -29,9 +29,22 @@ class SessionForm extends React.Component {
 
 
 render() {
-
+  let errors = this.props.errors
+  debugger
+  if (Object.keys(errors).length === 0) {
+    errors = ''
+  } else {
+    errors = Object.values(errors)[0].map(error => {
+      return (
+        <li>
+          {error}
+        </li>
+      )
+    })
+  debugger
+    }
   return (
-    <div >
+    <div>
  
     <form onSubmit={this.handleSubmit} className="login-form-box">
     <div className="signin-form" >
@@ -42,6 +55,9 @@ render() {
             <input className="signinboxes" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" /> 
       </label>
           <input id="submitbox" type='submit' value="Sign in "/>
+        <ul className='errorBox'>
+          {Object.values(errors)}
+        </ul>
     </div>
     </form>
       <form onSubmit={this.handleSubmit}>
@@ -50,7 +66,7 @@ render() {
         }} type='submit' value="Demo" > Demo</button>
         </form>
     </div>
-  )  
+  )
 };
 }
 export default withRouter(SessionForm);

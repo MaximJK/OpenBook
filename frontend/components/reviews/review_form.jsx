@@ -18,6 +18,7 @@ class ReviewForm extends React.Component {
     }
 
     render () {
+        debugger
         return (
             <div id="review-form">
                 <form onSubmit={this.handleSubmit}>
