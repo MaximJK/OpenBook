@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const ReviewsIndex = ({review}) => {
-    debugger
+     
     return (
 
     <li className="reviews-li">

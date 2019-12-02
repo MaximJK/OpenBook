@@ -16,12 +16,12 @@ class BookshelfIndex extends React.Component {
         
         let { bookshelves } = this.props;
         let bookshelfNames
-        debugger
+         
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
         } else {
             
-            debugger
+             
             bookshelfNames = Object.values(bookshelves).map(bookshelf => {
                 let bookTitles = bookshelf.book.map((bookX, i) => {
                     return (

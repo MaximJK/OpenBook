@@ -14,9 +14,9 @@ const BookshelvesReducer = (state = {}, action) => {
             return merge({}, action.bookshelves)
        
         case REMOVE_BOOKSHELFBOOK:
-            debugger
+             
             let newState = merge({}, state);
-            debugger
+             
             Object.values(newState).forEach(sBookshelf => {
                 for (var i = 0; i < sBookshelf.book.length; i++) {
                     if (sBookshelf.book[i].id == action.id) {

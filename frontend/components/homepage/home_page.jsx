@@ -5,7 +5,7 @@ import BooksIndexContainer from "../books/books_index_container"
 class HomePage extends React.Component {
 
     componentDidMount() {
-        debugger
+         
         this.props.fetchBookshelves(this.props.userId);
         // if (this.props.bookshelves.book_ids) {
         //     this.props.bookshelves.forEach(bookshelf => {

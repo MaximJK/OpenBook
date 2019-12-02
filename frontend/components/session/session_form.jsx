@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
 render() {
   let errors = this.props.errors
-  debugger
+   
   if (Object.keys(errors).length === 0) {
     errors = ''
   } else {
@@ -41,7 +41,7 @@ render() {
         </li>
       )
     })
-  debugger
+   
     }
   return (
     <div>

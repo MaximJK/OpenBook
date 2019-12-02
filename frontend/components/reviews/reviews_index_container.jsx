@@ -4,7 +4,7 @@ import ReviewIndexForm from './reviews_index'
 import { fetchReviews } from '../../actions/review_actions'
 
 const msp = (state, ownProps) => {
-    // debugger
+    //  
     return {
     // reviews: Object.keys(state.entities.reviews).map(id => state.entities.reviews[id]),
     // book: ownProps.book

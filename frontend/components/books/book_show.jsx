@@ -39,7 +39,7 @@ class BookShow extends React.Component {
     }
 
     reviewCheck(isReviewed, books_id) {
-        debugger
+         
         if (isReviewed === true) {
             return <div className="alreadyReviewed"> You've already reviewed this book</div>
         }
@@ -59,7 +59,7 @@ class BookShow extends React.Component {
         if (!books) {
             return <div>Loading...</div>;
         }
-        //     debugger
+        //      
         //     let bookshelfStatus = []
         //     books.bookshelves.forEach(bookshelf => {
         //         if (bookshelf.user_id == this.props.userId) {
@@ -88,7 +88,7 @@ class BookShow extends React.Component {
             })
         }
         let { reviews } = this.props;
-        debugger
+         
         if (Object.keys(reviews).length === 0 || !reviews) {
             reviews = ''
 

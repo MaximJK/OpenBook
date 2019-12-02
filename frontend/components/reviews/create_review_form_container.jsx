@@ -6,7 +6,7 @@ import { createReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
-    debugger
+     
     const review =  {
         book_id: ownProps.bookId,
         user_id: state.session.id,
