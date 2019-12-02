@@ -1,9 +1,7 @@
 .signin-form{
     margin: 10px;
     padding-top: 5px;
-    justify-content: center;
     height: 100px;
-    align-items: flex-start;
     text-align: center;
 
 }
@@ -35,14 +33,12 @@
     text-align: center;
     
 }
-.signinboxes{
-    
-}
+
 .errorBox{
        color: red;
     
     display: block;
     position: absolute;
     font-size: small;
-    list-style: none
+    list-style: none;
 }
