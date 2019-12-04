@@ -7,6 +7,12 @@ class SignupForm extends React.Component {
         this.state = {
             username: "",
             password: ""
+            
+
+        };
+        this.demo = {
+            username: "demo",
+            password: "demodemo"
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,9 +31,19 @@ class SignupForm extends React.Component {
 
     render() {
         let errors = this.props.errors
-        if (errors.length === 0 || errors === undefined) {
+
+        if (Object.keys(errors).length === 0) {
             errors = ''
-        } 
+        } else {
+            errors = Object.values(errors)[0].map(error => {
+                return (
+                    <li>
+                        {error}
+                    </li>
+                )
+            })
+
+        }
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -39,8 +55,15 @@ class SignupForm extends React.Component {
                         <label> 
                             <input className="signup-input-boxes" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" />
                         </label>
-                        <input id="signupbox" type='submit' value='Sign Up' />
+                        <div id="signupDiv">
+                        <input className="signupbox" type='submit' value='Sign Up' />
                     </div>
+                    </div>
+                </form>
+                <form id="demo" onSubmit={this.handleSubmit}>
+                        <button className="signupbox" onClick={() => {
+                        this.props.login(this.demo).then(() => this.props.history.push("/home"))
+                    }} type='submit' value="Demo" > Demo</button>
                 </form>
             </div>
         )

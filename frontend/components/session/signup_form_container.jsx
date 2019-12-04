@@ -1,6 +1,7 @@
 import SignUpForm from './signup_form.jsx'
 import { connect } from 'react-redux';
 import { signUp } from '../../actions/session_actions';
+import { login } from '../../actions/session_actions';
 import React from 'react';
 
 const mapStateToProps = ({errors})=> {
@@ -15,6 +16,7 @@ const mapDispatchToProps = dispatch => {
 
   return {
     processForm: (user) => dispatch(signUp(user)),
+    login: (user) => dispatch(login(user)),
   };
 
 };

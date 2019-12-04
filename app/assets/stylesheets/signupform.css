@@ -28,7 +28,7 @@ display: block;
     margin-top: 5px;
 }
 
-#signupbox{
+.signupbox{
     padding: 8px;
     border: 0px;
     border-radius: 4px;
@@ -39,4 +39,16 @@ display: block;
     display: block;
     position: relative;
     margin-top: 5px;
+    margin-right: 10px;
+}
+.signupbox:hover{
+    background-color: #FFD56D;
+}
+
+#demo{
+    padding-left: 5.5em;
+}
+
+.login-form-box{
+   height: 6.4em;
 }

@@ -55,16 +55,8 @@ render() {
             <input className="signinboxes" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" /> 
       </label>
           <input id="submitbox" type='submit' value="Sign in "/>
-        <ul className='errorBox'>
-          {Object.values(errors)}
-        </ul>
     </div>
     </form>
-      <form onSubmit={this.handleSubmit}>
-        <button className="demobox" onClick={() => {
-          this.props.processForm(this.demo).then(() => this.props.history.push("/home"))
-        }} type='submit' value="Demo" > Demo</button>
-        </form>
     </div>
   )
 };
