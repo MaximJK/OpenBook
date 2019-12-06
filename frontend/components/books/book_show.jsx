@@ -38,10 +38,32 @@ class BookShow extends React.Component {
         }
     }
 
-    reviewCheck(isReviewed, books_id) {
+    reviewCheck(isReviewed, books_id, userReview) {
          
         if (isReviewed === true) {
-            return <div className="alreadyReviewed"> You've already reviewed this book</div>
+            
+            return (
+                <div>
+                <ul>
+
+                <li className="reviews-li">
+                    <div className="review-div">
+                        <div className="review-header">
+                            you rated it <span className="stars">{this.printStars(userReview.rating)}</span> <a className='created'>{userReview.created_at.slice(0, 10)}</a>
+                        </div>
+                        <div className='review-body'>
+                            <p>{userReview.body}</p>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+                    <p>edit</p>
+                    <p onClick={() => { this.props.deleteReview(userReview.id)}}>delete</p>
+                 
+                </div>
+
+            
+            )
         }
         else {
             return <CreateReviewFormContainer
@@ -50,7 +72,9 @@ class BookShow extends React.Component {
     }
  
     render() {
+        
         let isReviewed = false
+        let userReview
         let averageReview = 0;
         let ratingDiv = ''
         let numReviews
@@ -98,6 +122,7 @@ class BookShow extends React.Component {
                 averageReview += review.rating
                 if (review.user_id === this.props.userId){
                     isReviewed = true
+                    userReview = review
                 }
             })
             numReviews = Object.values(reviews).length
@@ -105,23 +130,23 @@ class BookShow extends React.Component {
             averageReview = (averageReview).toFixed(2)
             ratingDiv = this.printStars(averageReview)
             reviews = Object.values(reviews).map(review => {
-
-            return (
-            
-                // <ReviewsIndex 
-                // key={review.id}
-                // review={review} />
-                <li className="reviews-li">
-                    <div className="review-div">
-                    <div className="review-header">
-                            {review.username} rated it <span className="stars">{this.printStars(review.rating)}</span> <a className='created'>{review.created_at.slice(0, 10)}</a>
-                    </div>
-                    <div className='review-body'>
-                        <p>{review.body}</p>
-                    </div>
-                    </div>
-                </li>
-            )
+            if (review !== userReview) {
+                return (
+                
+                    // <ReviewsIndex 
+                    // key={review.id}
+                    // review={review} />
+                    <li className="reviews-li">
+                        <div className="review-div">
+                        <div className="review-header">
+                                {review.username} rated it <span className="stars">{this.printStars(review.rating)}</span> <a className='created'>{review.created_at.slice(0, 10)}</a>
+                        </div>
+                        <div className='review-body'>
+                            <p>{review.body}</p>
+                        </div>
+                        </div>
+                    </li>
+            )}
         })}
 
         return (
@@ -154,7 +179,7 @@ class BookShow extends React.Component {
                 </div>
                 <div className='review-form-container'>
                     
-                    {this.reviewCheck(isReviewed, books.id)}
+                    {this.reviewCheck(isReviewed, books.id, userReview)}
                 </div>
                 <div>
                     <ul className='review-list'>

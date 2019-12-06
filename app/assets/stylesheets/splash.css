@@ -77,3 +77,32 @@ margin-top: 55px
     text-align: center
 
 }
+#footer{
+ width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    position: fixed;
+    bottom: 0;
+    border: 1px solid black;
+    background-color: white;
+    padding: .5em;
+    align-items: center;
+    color: #B7AD98;
+}
+.fab {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 2em;
+    color: #B7AD98;
+}
+.fab:hover{
+    color: #38210F;
+}
+
+#footerLink{
+color: #B7AD98;
+}
+#footerLink:hover{
+   color: #38210F;
+}

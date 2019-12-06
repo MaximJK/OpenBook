@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
     def show
-        @review = Review.find(params[:id])
+        @review = Review.find_by(params[:user_id])
 
     end
 

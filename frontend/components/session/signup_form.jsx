@@ -60,7 +60,7 @@ class SignupForm extends React.Component {
                     </div>
                     </div>
                 </form>
-                <form id="demo" onSubmit={this.handleSubmit}>
+                <form id="demo">
                         <button className="signupbox" onClick={() => {
                         this.props.login(this.demo).then(() => this.props.history.push("/home"))
                     }} type='submit' value="Demo" > Demo</button>

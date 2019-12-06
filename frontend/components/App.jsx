@@ -6,7 +6,9 @@ import SplashContainer from './splash/splash_container'
 import BookShowContainer from './books/book_show_container'
 import BooksIndexContainer from './books/books_index_container'
 import BookshelfContainer from './bookshelves/bookshelf_container'
+import Footer from './footer/footer'
 import React from "react";
+
 import { Provider } from 'react-redux';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
@@ -31,6 +33,9 @@ const App = () => (
             <ProtectedRoute exact path='/bookshelves/:userId' component={BookshelfContainer} />
         </Switch>
     </div>
+    <footer>
+            <Route path='/' component={Footer}/>
+    </footer>
     </>
 );
 
