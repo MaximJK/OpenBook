@@ -44,7 +44,7 @@ class BookShow extends React.Component {
             
             return (
                 <div>
-                <ul>
+                
 
                 <li className="reviews-li">
                     <div className="review-div">
@@ -56,7 +56,7 @@ class BookShow extends React.Component {
                         </div>
                     </div>
                 </li>
-                </ul>
+                
                     <p>edit</p>
                     <p onClick={() => { this.props.deleteReview(userReview.id)}}>delete</p>
                  

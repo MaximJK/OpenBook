@@ -1,9 +1,9 @@
 #review-form{
     display: flex;
     font-family: "Merriweather", serif;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 35px;
-    margin-left: 450px;
+    
 }
 
 #rating-eles{
@@ -102,4 +102,9 @@ height: 20px;
     justify-content: flex-start;
     margin-top: 35px;
     margin-left: 450px;
+}
+.review-form-container{
+    display: flex;
+    justify-content: center;
+    margin-right: 12vh;
 }
