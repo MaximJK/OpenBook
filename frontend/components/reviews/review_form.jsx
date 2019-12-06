@@ -6,6 +6,14 @@ class ReviewForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.review;
+    
+    }
+    defineAction(){
+        if (this.props.type.type === 'save') {
+            return this.props.createReview
+        } else {
+            return this.props.updateReview
+        }
     }
     update(field) {
         return (e) => {
@@ -14,11 +22,12 @@ class ReviewForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(() => this.props.history.push(`/books/${this.state.book_id}`));
+        let action = this.defineAction()
+        action(this.state).then(() => this.props.history.push(`/books/${this.state.book_id}`));
     }
 
     render () {
-         
+         debugger
         return (
             <div id="review-form">
                 <form onSubmit={this.handleSubmit}>
@@ -52,7 +61,7 @@ class ReviewForm extends React.Component {
                          />
                     </div>
 
-                    <input className="submit"  type="submit" value="save" />
+                    <input className="submit"  type="submit" value={this.props.type.type} />
                 </form>
             </div>
         );

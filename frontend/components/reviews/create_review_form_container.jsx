@@ -2,26 +2,33 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import ReviewForm from './review_form'
-import { createReview } from '../../actions/review_actions'
+import { createReview, updateReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
      
     const review =  {
+        id:ownProps.id,
         book_id: ownProps.bookId,
         user_id: state.session.id,
-        body: '',
-        rating: 0
+        body: ownProps.body,
+        rating: ownProps.rating
 
     }
+    const type = {
+        type: ownProps.type
+}
+
     return {
-        review 
+        review,
+        type
 }
 }
 
 const mdp = dispatch => {
     return {
-        action: review => dispatch(createReview(review))
+        createReview: review => dispatch(createReview(review)),
+        updateReview: review => dispatch(updateReview(review))
 
     }
 }

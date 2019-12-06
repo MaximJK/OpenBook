@@ -5,8 +5,10 @@ import ReviewsIndex from '../reviews/reviews_index'
 import AddBookForm from '../bookshelves/add_book_form';
 
 class BookShow extends React.Component {
-    constructor(props) {
-        super(props);
+
+        state = {
+            editing: false
+        
         
         
     }
@@ -24,7 +26,11 @@ class BookShow extends React.Component {
             }
         }
         return x
-    }   
+    }  
+    componentWillReceiveProps() {
+        this.setState({ editing: false })
+        }
+
     componentDidMount() {
         this.props.fetchBook(this.props.match.params.bookId);
         this.props.fetchReviews(Number(this.props.match.params.bookId));
@@ -33,14 +39,23 @@ class BookShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
+        
         if (prevProps.match.params.bookId != this.props.match.params.bookId) {
             this.props.fetchBook(this.props.match.params.bookId);
         }
     }
 
     reviewCheck(isReviewed, books_id, userReview) {
+        if (this.state.editing === true){
+            return <CreateReviewFormContainer
+                id={userReview.id}
+                bookId={books_id}
+                body={userReview.body}
+                rating={userReview.rating}
+                type={'update'} />
+        }
          
-        if (isReviewed === true) {
+        else if (isReviewed === true) {
             
             return (
                 <div>
@@ -57,7 +72,7 @@ class BookShow extends React.Component {
                     </div>
                 </li>
                 
-                    <p>edit</p>
+                    <p onClick={() => { this.setState({ editing: true }) }}>edit</p>
                     <p onClick={() => { this.props.deleteReview(userReview.id)}}>delete</p>
                  
                 </div>
@@ -67,12 +82,14 @@ class BookShow extends React.Component {
         }
         else {
             return <CreateReviewFormContainer
-                bookId={books_id} />
+                bookId={books_id}
+                body={''}
+                rating={0}
+                type={'save'} />
         }
     }
  
     render() {
-        
         let isReviewed = false
         let userReview
         let averageReview = 0;

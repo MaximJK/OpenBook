@@ -24,7 +24,7 @@ export default (state = {}, action) => {
             delete newState[action.reviewId.id];
             
             return newState;
-        case UPDATE_REVIEW:
+       
 
         default:
             return state;
