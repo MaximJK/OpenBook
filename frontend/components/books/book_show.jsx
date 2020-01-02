@@ -156,7 +156,7 @@ class BookShow extends React.Component {
                     <li className="reviews-li">
                         <div className="review-div">
                         <div className="review-header">
-                                {review.username} rated it <span className="stars">{this.printStars(review.rating)}</span> <a className='created'>{review.created_at.slice(0, 10)}</a>
+                        <Link  to={`/bookshelves/${review.user_id}`}>{review.username}</Link> rated it <span className="stars">{this.printStars(review.rating)}</span> <a className='created'>{review.created_at.slice(0, 10)}</a>
                         </div>
                         <div className='review-body'>
                             <p>{review.body}</p>
