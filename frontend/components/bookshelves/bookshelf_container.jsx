@@ -5,8 +5,10 @@ import { fetchBookshelves,
 
 
 const msp = (state, ownProps) => {
+    debugger
     return {
         userId: state.session.id,
+        bookshelfId: ownProps.match.params.userId,
         bookshelves: state.entities.bookshelves,
     }
 }

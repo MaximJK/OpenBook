@@ -8,15 +8,19 @@ import ShowBookshelf from './show_bookshelf';
 class BookshelfIndex extends React.Component {
     componentDidMount() {
         
-        this.props.fetchBookshelves(this.props.userId);
+        this.props.fetchBookshelves(this.props.bookshelfId);
     }
     
   
     render() {
         
-        let { bookshelves } = this.props;
+        let { bookshelves, userId, bookshelfId } = this.props;
         let bookshelfNames
-         
+        let myShelf = false
+        if (userId === parseInt(bookshelfId)) {
+            myShelf = true
+        }
+        debugger
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
         } else {
@@ -33,6 +37,7 @@ class BookshelfIndex extends React.Component {
                         removeBook={this.props.removeBook}
                         bookshelf={bookX.id}
                         author={bookX.data.author}
+                        myShelf={myShelf}
                         />
                       
                     )
