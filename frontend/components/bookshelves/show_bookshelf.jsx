@@ -42,4 +42,4 @@ const showBookshelf = props => {
 
 }
 
-export default showBookshelf;
+export default withRouter(showBookshelf);

@@ -10,8 +10,14 @@ class BookshelfIndex extends React.Component {
         
         this.props.fetchBookshelves(this.props.bookshelfId);
     }
+    componentDidUpdate(prevProps) {
+        debugger
+        if (prevProps.bookshelfId != this.props.bookshelfId) {
+            this.props.fetchBookshelves(this.props.bookshelfId);
+        }
+    }
     
-  
+
     render() {
         
         let { bookshelves, userId, bookshelfId } = this.props;
@@ -20,7 +26,7 @@ class BookshelfIndex extends React.Component {
         if (userId === parseInt(bookshelfId)) {
             myShelf = true
         }
-        debugger
+        
         if (Object.keys(bookshelves).length === 0 || !bookshelves) {
             bookshelves = ''
         } else {
@@ -68,4 +74,4 @@ class BookshelfIndex extends React.Component {
 
     };
 }
-export default BookshelfIndex;
+export default withRouter(BookshelfIndex);

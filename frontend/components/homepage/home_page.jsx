@@ -6,7 +6,7 @@ class HomePage extends React.Component {
 
     componentDidMount() {
          
-        this.props.fetchBookshelves(this.props.userId);
+       
         // if (this.props.bookshelves.book_ids) {
         //     this.props.bookshelves.forEach(bookshelf => {
         //         bookshelf.book_ids.forEach(bookId => {
