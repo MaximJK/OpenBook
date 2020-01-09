@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ShowBookshelf from './show_bookshelf';
-
+// add more social elements
 class BookshelfIndex extends React.Component {
     componentDidMount() {
         
