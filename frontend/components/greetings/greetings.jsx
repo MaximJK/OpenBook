@@ -2,20 +2,72 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Greetings extends React.Component {
-    componentDidMount() {
-        
+    constructor(props) {
+        super(props);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            initialBooks: [],
+            books: []
+        }
+
     }
 
+    filteredBooks = (event) => {
+        let books = this.state.initialBooks;
+        debugger
+        books = Object.values(books).filter((book) => {
+            debugger
+            return book.title.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
+        });
+        this.setState({books: books});
+    }
+    componentDidMount = () => {
+        this.props.fetchBooks();
+        debugger
+        this.setState({
+            initialBooks: this.props.books,
+            books: this.props.books
+        });
+    }
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.books != this.props.books) {
+            this.setState({
+                initialBooks: this.props.books
+            });
+        }
+
+    }
+   
+
     render(){
+        debugger
+        let books2 
+        if (this.state.books === [] || this.state.books === {} || !this.state.books || this.state.books === undefined){
+            books2 = <li></li>
+        } else {
+            debugger
+        books2 = Object.values(this.state.books).map(book => {
+            return (
+                <li key={book.title}>
+                    {book.title}
+                </li>
+            )
+        })
+        }
         return (
             <>
-            <nav>
-                    <div className="nav-bar" id="header">
+            <nav className="nav-bar">
+                    <div className="header-parent" id="header">
                         <Link to={'/home'}>
                 <div id="small-title" >open<span className="book">book</span> </div>
                 </Link>
-                <div id="searchbar-box">
-                    <input className="searchBox__input" type="text" placeholder="Search books" />
+                <div className="search">
+                <form id="searchbar-box">
+                    <input className="searchBox__input" type="text" placeholder="Search books" onChange={this.filteredBooks}  />
+                </form>
+                <ul className="search_dropdown">
+                    {books2}
+                </ul>
                 </div>
                 <div id='user-nav'>
                 <h1 className='block' id='username'>{this.props.currentUser.username}</h1>
