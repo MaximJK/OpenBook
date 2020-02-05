@@ -15,10 +15,13 @@ class Greetings extends React.Component {
     filteredBooks = (event) => {
         let books = this.state.initialBooks;
         debugger
+        if (event.target.value === "") {
+            books = []
+        } else {
         books = Object.values(books).filter((book) => {
             debugger
             return book.title.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
-        });
+        })};
         this.setState({books: books});
     }
     componentDidMount = () => {
@@ -48,9 +51,12 @@ class Greetings extends React.Component {
             debugger
         books2 = Object.values(this.state.books).map(book => {
             return (
-                <li key={book.title}>
-                    {book.title}
+                <Link to={`/books/${book.id}`}>
+                <li className="search-li" key={book.title}>
+                    <div>{book.title}</div>
+                    <div>by {book.author}</div>
                 </li>
+                </Link>
             )
         })
         }
