@@ -1,9 +1,8 @@
 .nav-bar{
   
     background-color: #f4f1ea;
-    height: 4%;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-    
+    height: 50px;
     
     font:'Lato', sans-serif;
     
@@ -93,7 +92,7 @@ font-family: 'Lato', sans-serif
 }
 #booksdiv{
 }
-.searchBox__input{
+.searchBox{
         background: #FFFFFF;
     border-radius: 3px;
     border: #DCD6CC 1px solid;
@@ -104,6 +103,7 @@ font-family: 'Lato', sans-serif
     font-size: 14px;
     height: 32px;
     box-sizing: border-box;
+    display: block;
 }
 #searchbar-box{
     /* margin-left: 50px; */
@@ -114,13 +114,24 @@ font-family: 'Lato', sans-serif
     margin-left: 16px;
 margin-top: 9px;
 }
-.search_dropdown{
+#searchbar-box:focus-within{
+    pointer-events: none;
+}
+#searchbar-box:focus-within + .search-dropdown{
+    opacity:1; 
+    visibility:visible;
+}
+.search-dropdown{
     list-style: none;
     z-index: 70;
     background-color: white;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     margin: 0;
     padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    
 }
 
 
@@ -129,5 +140,8 @@ color: black;
 }
 .search-li:hover{
     background-color: #f4f1ea;
+    text-decoration: none;
+}
+a:hover{
     text-decoration: none;
 }

@@ -69,9 +69,9 @@ class Greetings extends React.Component {
                 </Link>
                 <div className="search">
                 <form id="searchbar-box">
-                    <input className="searchBox__input" type="text" placeholder="Search books" onChange={this.filteredBooks}  />
+                    <input className="searchBox" type="text" placeholder="Search books" onChange={this.filteredBooks}  />
                 </form>
-                <ul className="search_dropdown">
+                <ul className="search-dropdown">
                     {books2}
                 </ul>
                 </div>
