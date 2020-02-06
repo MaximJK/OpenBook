@@ -53,7 +53,7 @@ class Greetings extends React.Component {
             return (
                 <Link to={`/books/${book.id}`}>
                 <li className="search-li" key={book.title}>
-                    <div>{book.title}</div>
+                    <div id='search-title'>{book.title}</div>
                     <div>by {book.author}</div>
                 </li>
                 </Link>
