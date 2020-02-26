@@ -24,9 +24,14 @@ class Greetings extends React.Component {
         })};
         this.setState({books: books});
     }
+    clearSearch = () => {
+        this.setState({books: []})
+        let searchBar = document.getElementById("searchbar-box");
+        searchBar.reset()
+    }
     componentDidMount = () => {
         this.props.fetchBooks();
-        debugger
+        
         this.setState({
             initialBooks: this.props.books,
             books: this.props.books
@@ -38,20 +43,17 @@ class Greetings extends React.Component {
                 initialBooks: this.props.books
             });
         }
-
     }
-   
-
     render(){
-        debugger
+        
         let books2 
         if (this.state.books === [] || this.state.books === {} || !this.state.books || this.state.books === undefined){
             books2 = <li></li>
         } else {
-            debugger
+            
         books2 = Object.values(this.state.books).map(book => {
             return (
-                <Link to={`/books/${book.id}`}>
+                <Link to={`/books/${book.id}`} onClick={this.clearSearch}>
                 <li className="search-li" key={book.title}>
                     <div id='search-title'>{book.title}</div>
                     <div>by {book.author}</div>
